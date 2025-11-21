@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Purrfect Home", "Purrfect Home\Purrfect Home.csproj", "{BDCF97F1-4008-4E54-B27A-39D827C151D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDCF97F1-4008-4E54-B27A-39D827C151D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDCF97F1-4008-4E54-B27A-39D827C151D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDCF97F1-4008-4E54-B27A-39D827C151D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDCF97F1-4008-4E54-B27A-39D827C151D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D933B943-8BC5-4A11-AC0E-1B245A59964E}
+	EndGlobalSection
+EndGlobal
