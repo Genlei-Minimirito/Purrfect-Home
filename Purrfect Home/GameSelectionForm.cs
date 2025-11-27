@@ -61,7 +61,7 @@ namespace Purrfect_Home
             lblCatJack.Show();
             picBack.Hide();
             picNext.Show();
-           
+
         }
 
         private void picBack2_Click(object sender, EventArgs e)
@@ -84,6 +84,11 @@ namespace Purrfect_Home
         }
 
         private void picNext3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameSelectionForm_Load(object sender, EventArgs e)
         {
 
         }
