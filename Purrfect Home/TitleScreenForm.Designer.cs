@@ -31,9 +31,13 @@
             pictPlay = new PictureBox();
             picCred = new PictureBox();
             picExt = new PictureBox();
+            picMode = new PictureBox();
+            picModeLight = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictPlay).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picCred).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picExt).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picMode).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picModeLight).BeginInit();
             SuspendLayout();
             // 
             // pictPlay
@@ -66,6 +70,27 @@
             picExt.TabStop = false;
             picExt.Click += picExt_Click;
             // 
+            // picMode
+            // 
+            picMode.BackColor = Color.Transparent;
+            picMode.Location = new Point(12, 5);
+            picMode.Name = "picMode";
+            picMode.Size = new Size(66, 59);
+            picMode.TabIndex = 3;
+            picMode.TabStop = false;
+            picMode.Click += picMode_Click;
+            // 
+            // picModeLight
+            // 
+            picModeLight.BackColor = Color.Transparent;
+            picModeLight.Location = new Point(12, 5);
+            picModeLight.Name = "picModeLight";
+            picModeLight.Size = new Size(66, 59);
+            picModeLight.TabIndex = 4;
+            picModeLight.TabStop = false;
+            picModeLight.Visible = false;
+            picModeLight.Click += picModeLight_Click;
+            // 
             // TitleScreenForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -73,6 +98,8 @@
             BackgroundImage = Properties.Resources.LIGHT_MODE_TITLE_SCREEN;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1359, 750);
+            Controls.Add(picModeLight);
+            Controls.Add(picMode);
             Controls.Add(picExt);
             Controls.Add(picCred);
             Controls.Add(pictPlay);
@@ -85,6 +112,8 @@
             ((System.ComponentModel.ISupportInitialize)pictPlay).EndInit();
             ((System.ComponentModel.ISupportInitialize)picCred).EndInit();
             ((System.ComponentModel.ISupportInitialize)picExt).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picMode).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picModeLight).EndInit();
             ResumeLayout(false);
         }
 
@@ -93,5 +122,7 @@
         private PictureBox pictPlay;
         private PictureBox picCred;
         private PictureBox picExt;
+        private PictureBox picMode;
+        private PictureBox picModeLight;
     }
 }

@@ -63,9 +63,79 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BATCAT {
+            get {
+                object obj = ResourceManager.GetObject("BATCAT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GAME_SELECTION_UI {
+            get {
+                object obj = ResourceManager.GetObject("GAME_SELECTION_UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HOME_UI {
+            get {
+                object obj = ResourceManager.GetObject("HOME_UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LIGHT_MODE_TITLE_SCREEN {
             get {
-                object obj = ResourceManager.GetObject("LIGHT MODE TITLE SCREEN", resourceCulture);
+                object obj = ResourceManager.GetObject("LIGHT_MODE_TITLE_SCREEN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NIGHT_MODE_TITLE_SCREEN {
+            get {
+                object obj = ResourceManager.GetObject("NIGHT_MODE_TITLE_SCREEN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POSA_MASAMA {
+            get {
+                object obj = ResourceManager.GetObject("POSA_MASAMA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POSA_NA_TIGER {
+            get {
+                object obj = ResourceManager.GetObject("POSA_NA_TIGER", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POSANG_PASKO {
+            get {
+                object obj = ResourceManager.GetObject("POSANG_PASKO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
