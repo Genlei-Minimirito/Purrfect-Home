@@ -1,8 +1,10 @@
+using Purrfect_Home;
+
 namespace catjack
 {
     public partial class CatjackDeck : Form
     {
-        
+
         int UserCardSum = 0;
         int ComputerCardSum = 0;
 
@@ -18,7 +20,7 @@ namespace catjack
 
             DrawCards draw = new DrawCards(UserCards);
             int cardNum = draw.DrawCard();
-            
+
             UserCardSum = UserCardSum + cardNum;
             int pscore = UserCardSum;
             Player_Score.Text = pscore.ToString();
@@ -27,7 +29,7 @@ namespace catjack
                 Hit_button.Enabled = false;
                 ComputerPlay();
                 Stand_Button.Enabled = false;
-                
+
 
             }
 
@@ -46,78 +48,60 @@ namespace catjack
             ComputerPlay();
             Stand_Button.Enabled = false;
             Hit_button.Enabled = false;
-            
+
         }
         public void ComputerPlay()
         {
-            
             while (ComputerCardSum < UserCardSum + 1)
             {
                 DrawCards draw = new DrawCards(Computer_Panel);
                 int cardNum = draw.DrawCard();
-                ComputerCardSum = ComputerCardSum + cardNum;
-                
-                
+                ComputerCardSum += cardNum;
 
                 if (ComputerCardSum >= 21)
                 {
-                    
                     break;
                 }
             }
-            
+
             Computer_Score.Text = ComputerCardSum.ToString();
-            if (UserCardSum > 21) 
+
+            // Hide all labels first
+            lblWin.Visible = false;
+            lblLose.Visible = false;
+            lblTie.Visible = false;
+
+            if (UserCardSum > 21)
             {
-                TextBox lose = new TextBox();
-                lose.Location = new System.Drawing.Point(380, 200);
-                lose.Size = new System.Drawing.Size(50, 300);
-                lose.TextAlign = HorizontalAlignment.Center;
-                lose.Text = "You Lost";
-                lose.ReadOnly = true;
-                this.Controls.Add(lose);
+                lblLose.Visible = true;
             }
             else if (ComputerCardSum > 21)
             {
-                TextBox win = new TextBox();
-                win.Location = new System.Drawing.Point(380, 200);
-                win.Size = new System.Drawing.Size(70, 300);
-                win.Text = "You Win";
-                win.TextAlign = HorizontalAlignment.Center;
-                win.ReadOnly = true;
-                this.Controls.Add(win);
+                lblWin.Visible = true;
             }
             else if (ComputerCardSum < UserCardSum)
             {
-                TextBox win = new TextBox();
-                win.Location = new System.Drawing.Point(380, 200);
-                win.Size = new System.Drawing.Size(70, 300);
-                win.Text = "You Win";
-                win.TextAlign = HorizontalAlignment.Center;
-                win.ReadOnly = true;
-                this.Controls.Add(win);
-
+                lblWin.Visible = true;
             }
             else if (ComputerCardSum > UserCardSum)
             {
-                TextBox lose = new TextBox();
-                lose.Location = new System.Drawing.Point(380, 200);
-                lose.Size = new System.Drawing.Size(50, 300);
-                lose.TextAlign = HorizontalAlignment.Center;
-                lose.Text = "You Lost";
-                lose.ReadOnly = true;
-                this.Controls.Add(lose);
+                lblLose.Visible = true;
             }
             else
             {
-                TextBox tie = new TextBox();
-                tie.Location = new System.Drawing.Point(380, 200);
-                tie.Size = new System.Drawing.Size(50, 300);
-                tie.TextAlign = HorizontalAlignment.Center;
-                tie.Text = "It's a tie";
-                tie.ReadOnly = true;
-                this.Controls.Add(tie);
+                lblTie.Visible = true;
             }
+        }
+
+
+        private void CatjackDeck_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblWin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

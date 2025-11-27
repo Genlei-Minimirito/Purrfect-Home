@@ -1,4 +1,5 @@
-﻿using System;
+﻿using catjack;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -91,6 +92,15 @@ namespace Purrfect_Home
         private void GameSelectionForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void playCat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form formCatJack = new CatjackDeck();
+            formCatJack.StartPosition = FormStartPosition.Manual;
+            formCatJack.Location = this.Location;
+            formCatJack.ShowDialog();
         }
     }
 }

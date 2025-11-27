@@ -33,7 +33,7 @@
             picHome = new PictureBox();
             picNext = new PictureBox();
             picBack = new PictureBox();
-            pictureBox4 = new PictureBox();
+            playCat = new PictureBox();
             picInfixToPawsfix = new PictureBox();
             picNext2 = new PictureBox();
             picBack2 = new PictureBox();
@@ -47,7 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)picHome).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picNext).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picBack).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)playCat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picInfixToPawsfix).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picNext2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picBack2).BeginInit();
@@ -61,20 +61,18 @@
             picCatJack.BackColor = Color.Transparent;
             picCatJack.BackgroundImage = (Image)resources.GetObject("picCatJack.BackgroundImage");
             picCatJack.BackgroundImageLayout = ImageLayout.Stretch;
-            picCatJack.Location = new Point(575, 201);
-            picCatJack.Margin = new Padding(3, 2, 3, 2);
+            picCatJack.Location = new Point(657, 268);
             picCatJack.Name = "picCatJack";
-            picCatJack.Size = new Size(460, 168);
+            picCatJack.Size = new Size(526, 224);
             picCatJack.TabIndex = 0;
             picCatJack.TabStop = false;
             // 
             // picHome
             // 
             picHome.BackColor = Color.Transparent;
-            picHome.Location = new Point(38, 34);
-            picHome.Margin = new Padding(3, 2, 3, 2);
+            picHome.Location = new Point(43, 45);
             picHome.Name = "picHome";
-            picHome.Size = new Size(70, 54);
+            picHome.Size = new Size(80, 72);
             picHome.TabIndex = 1;
             picHome.TabStop = false;
             picHome.Click += picHome_Click;
@@ -82,10 +80,9 @@
             // picNext
             // 
             picNext.BackColor = Color.Transparent;
-            picNext.Location = new Point(620, 414);
-            picNext.Margin = new Padding(3, 2, 3, 2);
+            picNext.Location = new Point(709, 552);
             picNext.Name = "picNext";
-            picNext.Size = new Size(481, 107);
+            picNext.Size = new Size(550, 143);
             picNext.TabIndex = 2;
             picNext.TabStop = false;
             picNext.Click += picNext_Click;
@@ -93,34 +90,32 @@
             // picBack
             // 
             picBack.BackColor = Color.Transparent;
-            picBack.Location = new Point(80, 414);
-            picBack.Margin = new Padding(3, 2, 3, 2);
+            picBack.Location = new Point(91, 552);
             picBack.Name = "picBack";
-            picBack.Size = new Size(481, 107);
+            picBack.Size = new Size(550, 143);
             picBack.TabIndex = 3;
             picBack.TabStop = false;
             picBack.Visible = false;
             picBack.Click += picBack_Click;
             // 
-            // pictureBox4
+            // playCat
             // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Location = new Point(88, 243);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(402, 113);
-            pictureBox4.TabIndex = 4;
-            pictureBox4.TabStop = false;
+            playCat.BackColor = Color.Transparent;
+            playCat.Location = new Point(104, 325);
+            playCat.Name = "playCat";
+            playCat.Size = new Size(459, 151);
+            playCat.TabIndex = 4;
+            playCat.TabStop = false;
+            playCat.Click += playCat_Click;
             // 
             // picInfixToPawsfix
             // 
             picInfixToPawsfix.BackColor = Color.Transparent;
             picInfixToPawsfix.BackgroundImage = Properties.Resources.NIGHT_MODE_TITLE_SCREEN;
             picInfixToPawsfix.BackgroundImageLayout = ImageLayout.Stretch;
-            picInfixToPawsfix.Location = new Point(575, 201);
-            picInfixToPawsfix.Margin = new Padding(3, 2, 3, 2);
+            picInfixToPawsfix.Location = new Point(657, 268);
             picInfixToPawsfix.Name = "picInfixToPawsfix";
-            picInfixToPawsfix.Size = new Size(460, 168);
+            picInfixToPawsfix.Size = new Size(526, 224);
             picInfixToPawsfix.TabIndex = 5;
             picInfixToPawsfix.TabStop = false;
             picInfixToPawsfix.Visible = false;
@@ -128,10 +123,9 @@
             // picNext2
             // 
             picNext2.BackColor = Color.Transparent;
-            picNext2.Location = new Point(620, 414);
-            picNext2.Margin = new Padding(3, 2, 3, 2);
+            picNext2.Location = new Point(709, 552);
             picNext2.Name = "picNext2";
-            picNext2.Size = new Size(481, 107);
+            picNext2.Size = new Size(550, 143);
             picNext2.TabIndex = 6;
             picNext2.TabStop = false;
             picNext2.Visible = false;
@@ -140,10 +134,9 @@
             // picBack2
             // 
             picBack2.BackColor = Color.Transparent;
-            picBack2.Location = new Point(80, 414);
-            picBack2.Margin = new Padding(3, 2, 3, 2);
+            picBack2.Location = new Point(91, 552);
             picBack2.Name = "picBack2";
-            picBack2.Size = new Size(481, 107);
+            picBack2.Size = new Size(550, 143);
             picBack2.TabIndex = 7;
             picBack2.TabStop = false;
             picBack2.Visible = false;
@@ -152,10 +145,9 @@
             // picBack3
             // 
             picBack3.BackColor = Color.Transparent;
-            picBack3.Location = new Point(80, 414);
-            picBack3.Margin = new Padding(3, 2, 3, 2);
+            picBack3.Location = new Point(91, 552);
             picBack3.Name = "picBack3";
-            picBack3.Size = new Size(481, 107);
+            picBack3.Size = new Size(550, 143);
             picBack3.TabIndex = 8;
             picBack3.TabStop = false;
             picBack3.Visible = false;
@@ -164,10 +156,9 @@
             // picNext3
             // 
             picNext3.BackColor = Color.Transparent;
-            picNext3.Location = new Point(620, 414);
-            picNext3.Margin = new Padding(3, 2, 3, 2);
+            picNext3.Location = new Point(709, 552);
             picNext3.Name = "picNext3";
-            picNext3.Size = new Size(481, 107);
+            picNext3.Size = new Size(550, 143);
             picNext3.TabIndex = 9;
             picNext3.TabStop = false;
             picNext3.Visible = false;
@@ -178,10 +169,9 @@
             picMemo.BackColor = Color.Transparent;
             picMemo.BackgroundImage = Properties.Resources.HOME_UI;
             picMemo.BackgroundImageLayout = ImageLayout.Stretch;
-            picMemo.Location = new Point(575, 201);
-            picMemo.Margin = new Padding(3, 2, 3, 2);
+            picMemo.Location = new Point(657, 268);
             picMemo.Name = "picMemo";
-            picMemo.Size = new Size(460, 168);
+            picMemo.Size = new Size(526, 224);
             picMemo.TabIndex = 10;
             picMemo.TabStop = false;
             picMemo.Visible = false;
@@ -191,9 +181,9 @@
             lblCatJack.BackColor = Color.Transparent;
             lblCatJack.Font = new Font("Ink Free", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblCatJack.ForeColor = SystemColors.ButtonHighlight;
-            lblCatJack.Location = new Point(559, 112);
+            lblCatJack.Location = new Point(639, 149);
             lblCatJack.Name = "lblCatJack";
-            lblCatJack.Size = new Size(502, 56);
+            lblCatJack.Size = new Size(574, 75);
             lblCatJack.TabIndex = 11;
             lblCatJack.Text = "CATJACK";
             lblCatJack.TextAlign = ContentAlignment.MiddleCenter;
@@ -203,9 +193,9 @@
             lblInfixToPawsfix.BackColor = Color.Transparent;
             lblInfixToPawsfix.Font = new Font("Ink Free", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblInfixToPawsfix.ForeColor = SystemColors.ButtonHighlight;
-            lblInfixToPawsfix.Location = new Point(517, 112);
+            lblInfixToPawsfix.Location = new Point(591, 149);
             lblInfixToPawsfix.Name = "lblInfixToPawsfix";
-            lblInfixToPawsfix.Size = new Size(584, 56);
+            lblInfixToPawsfix.Size = new Size(667, 75);
             lblInfixToPawsfix.TabIndex = 12;
             lblInfixToPawsfix.Text = "INFIX TO PAWSTFIX";
             lblInfixToPawsfix.TextAlign = ContentAlignment.MiddleCenter;
@@ -216,9 +206,9 @@
             lblMemo.BackColor = Color.Transparent;
             lblMemo.Font = new Font("Ink Free", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMemo.ForeColor = SystemColors.ButtonHighlight;
-            lblMemo.Location = new Point(559, 112);
+            lblMemo.Location = new Point(639, 149);
             lblMemo.Name = "lblMemo";
-            lblMemo.Size = new Size(502, 56);
+            lblMemo.Size = new Size(574, 75);
             lblMemo.TabIndex = 13;
             lblMemo.Text = "KITTY MEMORY";
             lblMemo.TextAlign = ContentAlignment.MiddleCenter;
@@ -226,11 +216,11 @@
             // 
             // GameSelectionForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1189, 562);
+            ClientSize = new Size(1359, 749);
             Controls.Add(lblMemo);
             Controls.Add(lblInfixToPawsfix);
             Controls.Add(lblCatJack);
@@ -240,14 +230,13 @@
             Controls.Add(picBack2);
             Controls.Add(picNext2);
             Controls.Add(picInfixToPawsfix);
-            Controls.Add(pictureBox4);
+            Controls.Add(playCat);
             Controls.Add(picBack);
             Controls.Add(picNext);
             Controls.Add(picHome);
             Controls.Add(picCatJack);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "GameSelectionForm";
             Text = "GameSelectionForm";
             Load += GameSelectionForm_Load;
@@ -255,7 +244,7 @@
             ((System.ComponentModel.ISupportInitialize)picHome).EndInit();
             ((System.ComponentModel.ISupportInitialize)picNext).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBack).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)playCat).EndInit();
             ((System.ComponentModel.ISupportInitialize)picInfixToPawsfix).EndInit();
             ((System.ComponentModel.ISupportInitialize)picNext2).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBack2).EndInit();
@@ -271,7 +260,7 @@
         private PictureBox picHome;
         private PictureBox picNext;
         private PictureBox picBack;
-        private PictureBox pictureBox4;
+        private PictureBox playCat;
         private PictureBox picInfixToPawsfix;
         private PictureBox picNext2;
         private PictureBox picBack2;

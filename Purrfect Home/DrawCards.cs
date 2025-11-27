@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
+using System.Windows.Forms;
 
-namespace catjack
+namespace Purrfect_Home
 {
     internal class DrawCards
     {
@@ -15,13 +13,18 @@ namespace catjack
         public DrawCards(Panel PlayerPanel)
         {
             UserCard = PlayerPanel;
-        }   
+        }
+
         public int DrawCard()
         {
-            
             int cardNum = r.Next(1, 11);
-            
-            Image img = (Image)catjack.Resources.ResourceManager.GetObject(cardNum.ToString());
+
+            // Your resource names: _1, _2, _3, ... _10
+            string resourceKey = $"_{cardNum}";
+
+            // Safely load resource
+            if (Purrfect_Home.Properties.Resources.ResourceManager.GetObject(resourceKey) is not Image img)
+                throw new Exception($"Resource not found: {resourceKey}");
 
             PictureBox card = new PictureBox();
             card.Width = 80;
@@ -29,13 +32,14 @@ namespace catjack
             card.SizeMode = PictureBoxSizeMode.StretchImage;
             card.Image = img;
 
-            
             int count = UserCard.Controls.Count;
             card.Left = count * offset;
             card.Top = 0;
+
             UserCard.Controls.Add(card);
-            
             return cardNum;
         }
+
+
     }
 }

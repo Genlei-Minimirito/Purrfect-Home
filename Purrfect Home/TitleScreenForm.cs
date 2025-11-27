@@ -5,12 +5,12 @@ namespace Purrfect_Home
 {
     public partial class TitleScreenForm : Form
     {
-        //SoundPlayer sound = new SoundPlayer(@"C:\Users\Lei\source\repos\Purrfect Home\Purrfect Home\Resources\SOUNDS\TITLEBGM.wav");
+        SoundPlayer sound = new SoundPlayer(@"C:\Users\Lei\source\repos\Purrfect Home\Purrfect Home\Resources\SOUNDS\TITLEBGM.wav");
         public TitleScreenForm()
         {
             InitializeComponent();
            
-            //sound.PlayLooping();
+            sound.PlayLooping();
         }
 
         private void TitleScreenForm_Load(object sender, EventArgs e)
