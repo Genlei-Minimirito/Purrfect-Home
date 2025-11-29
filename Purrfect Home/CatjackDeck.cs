@@ -11,29 +11,6 @@ namespace catjack
         public CatjackDeck()
         {
             InitializeComponent();
-            Player_Score.ReadOnly = true;
-            Computer_Score.ReadOnly = true;
-        }
-
-        private void Hit_button_Click(object sender, EventArgs e)
-        {
-
-            DrawCards draw = new DrawCards(UserCards);
-            int cardNum = draw.DrawCard();
-
-            UserCardSum = UserCardSum + cardNum;
-            int pscore = UserCardSum;
-            Player_Score.Text = pscore.ToString();
-            if (UserCardSum >= 21)
-            {
-                Hit_button.Enabled = false;
-                ComputerPlay();
-                Stand_Button.Enabled = false;
-
-
-            }
-
-
 
         }
 
@@ -42,14 +19,32 @@ namespace catjack
 
         }
 
+        private void picHit_Click(object sender, EventArgs e)
+        {
+            DrawCards draw = new DrawCards(UserCards);
+            int cardNum = draw.DrawCard();
 
-        private void Stand_Button_Click(object sender, EventArgs e)
+            UserCardSum += cardNum;
+
+            // Works for Label
+            Player_Score.Text = UserCardSum.ToString();
+
+            if (UserCardSum >= 21)
+            {
+                picHit.Enabled = false;
+                ComputerPlay();
+                picStand.Enabled = false;
+            }
+        }
+
+        private void picStand_Click(object sender, EventArgs e)
         {
             ComputerPlay();
-            Stand_Button.Enabled = false;
-            Hit_button.Enabled = false;
-
+            picStand.Enabled = false;
+            picHit.Enabled = false;
         }
+       
+
         public void ComputerPlay()
         {
             while (ComputerCardSum < UserCardSum + 1)
@@ -64,6 +59,7 @@ namespace catjack
                 }
             }
 
+            // Works for Label
             Computer_Score.Text = ComputerCardSum.ToString();
 
             // Hide all labels first
@@ -93,7 +89,6 @@ namespace catjack
             }
         }
 
-
         private void CatjackDeck_Load(object sender, EventArgs e)
         {
 
@@ -103,5 +98,16 @@ namespace catjack
         {
 
         }
+
+        private void picMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form formMenu = new HomeForm();
+            formMenu.StartPosition = FormStartPosition.Manual;
+            formMenu.Location = this.Location;
+            formMenu.ShowDialog();
+        }
+
+       
     }
 }

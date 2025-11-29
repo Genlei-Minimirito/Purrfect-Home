@@ -28,84 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatjackDeck));
             UserCards = new Panel();
-            Hit_button = new Button();
-            Stand_Button = new Button();
             Computer_Panel = new Panel();
-            Computer_Score = new TextBox();
-            Player_Score = new TextBox();
             lblWin = new Label();
             lblTie = new Label();
             lblLose = new Label();
+            picMenu = new PictureBox();
+            Computer_Score = new Label();
+            Player_Score = new Label();
+            picHit = new PictureBox();
+            picStand = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)picMenu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picHit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picStand).BeginInit();
             SuspendLayout();
             // 
             // UserCards
             // 
             UserCards.AutoScroll = true;
-            UserCards.BackColor = Color.OliveDrab;
-            UserCards.Location = new Point(301, 340);
+            UserCards.BackColor = Color.Transparent;
+            UserCards.Location = new Point(289, 500);
             UserCards.Margin = new Padding(3, 4, 3, 4);
             UserCards.Name = "UserCards";
-            UserCards.Size = new Size(320, 211);
+            UserCards.Size = new Size(1045, 251);
             UserCards.TabIndex = 0;
             UserCards.Paint += UserCards_Paint;
-            // 
-            // Hit_button
-            // 
-            Hit_button.BackColor = Color.Chocolate;
-            Hit_button.Location = new Point(682, 417);
-            Hit_button.Margin = new Padding(3, 4, 3, 4);
-            Hit_button.Name = "Hit_button";
-            Hit_button.Size = new Size(135, 56);
-            Hit_button.TabIndex = 1;
-            Hit_button.Text = "HIT";
-            Hit_button.UseVisualStyleBackColor = false;
-            Hit_button.Click += Hit_button_Click;
-            // 
-            // Stand_Button
-            // 
-            Stand_Button.BackColor = Color.Chocolate;
-            Stand_Button.Location = new Point(682, 495);
-            Stand_Button.Margin = new Padding(3, 4, 3, 4);
-            Stand_Button.Name = "Stand_Button";
-            Stand_Button.Size = new Size(135, 56);
-            Stand_Button.TabIndex = 2;
-            Stand_Button.Text = "STAND";
-            Stand_Button.UseVisualStyleBackColor = false;
-            Stand_Button.Click += Stand_Button_Click;
             // 
             // Computer_Panel
             // 
             Computer_Panel.AutoScroll = true;
-            Computer_Panel.BackColor = Color.OliveDrab;
-            Computer_Panel.Location = new Point(301, 16);
+            Computer_Panel.BackColor = Color.Transparent;
+            Computer_Panel.Location = new Point(289, 1);
             Computer_Panel.Margin = new Padding(3, 4, 3, 4);
             Computer_Panel.Name = "Computer_Panel";
-            Computer_Panel.Size = new Size(320, 211);
+            Computer_Panel.Size = new Size(1045, 220);
             Computer_Panel.TabIndex = 1;
-            // 
-            // Computer_Score
-            // 
-            Computer_Score.Location = new Point(168, 100);
-            Computer_Score.Margin = new Padding(3, 4, 3, 4);
-            Computer_Score.Name = "Computer_Score";
-            Computer_Score.Size = new Size(114, 27);
-            Computer_Score.TabIndex = 3;
-            // 
-            // Player_Score
-            // 
-            Player_Score.Location = new Point(168, 443);
-            Player_Score.Margin = new Padding(3, 4, 3, 4);
-            Player_Score.Name = "Player_Score";
-            Player_Score.Size = new Size(114, 27);
-            Player_Score.TabIndex = 4;
             // 
             // lblWin
             // 
             lblWin.AutoSize = true;
-            lblWin.Location = new Point(423, 272);
+            lblWin.BackColor = Color.Transparent;
+            lblWin.Font = new Font("Showcard Gothic", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblWin.ForeColor = Color.PeachPuff;
+            lblWin.Location = new Point(774, 308);
             lblWin.Name = "lblWin";
-            lblWin.Size = new Size(67, 20);
+            lblWin.Size = new Size(152, 35);
             lblWin.TabIndex = 5;
             lblWin.Text = "You Win!";
             lblWin.Visible = false;
@@ -113,9 +81,12 @@
             // lblTie
             // 
             lblTie.AutoSize = true;
-            lblTie.Location = new Point(450, 272);
+            lblTie.BackColor = Color.Transparent;
+            lblTie.Font = new Font("Showcard Gothic", 16.2F);
+            lblTie.ForeColor = Color.PeachPuff;
+            lblTie.Location = new Point(823, 308);
             lblTie.Name = "lblTie";
-            lblTie.Size = new Size(29, 20);
+            lblTie.Size = new Size(59, 35);
             lblTie.TabIndex = 6;
             lblTie.Text = "Tie";
             lblTie.Visible = false;
@@ -123,47 +94,110 @@
             // lblLose
             // 
             lblLose.AutoSize = true;
-            lblLose.Location = new Point(423, 272);
+            lblLose.BackColor = Color.Transparent;
+            lblLose.Font = new Font("Showcard Gothic", 16.2F);
+            lblLose.ForeColor = Color.PeachPuff;
+            lblLose.Location = new Point(774, 308);
             lblLose.Name = "lblLose";
-            lblLose.Size = new Size(71, 20);
+            lblLose.Size = new Size(157, 35);
             lblLose.TabIndex = 7;
             lblLose.Text = "You Lose!";
             lblLose.Visible = false;
+            // 
+            // picMenu
+            // 
+            picMenu.BackColor = Color.Transparent;
+            picMenu.Location = new Point(75, 290);
+            picMenu.Name = "picMenu";
+            picMenu.Size = new Size(83, 68);
+            picMenu.TabIndex = 8;
+            picMenu.TabStop = false;
+            picMenu.Click += picMenu_Click;
+            // 
+            // Computer_Score
+            // 
+            Computer_Score.BackColor = Color.Transparent;
+            Computer_Score.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Computer_Score.ForeColor = Color.PeachPuff;
+            Computer_Score.Location = new Point(30, 236);
+            Computer_Score.Name = "Computer_Score";
+            Computer_Score.Size = new Size(170, 30);
+            Computer_Score.TabIndex = 9;
+            Computer_Score.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Player_Score
+            // 
+            Player_Score.BackColor = Color.Transparent;
+            Player_Score.Font = new Font("Tahoma", 10.2F, FontStyle.Bold);
+            Player_Score.ForeColor = Color.PeachPuff;
+            Player_Score.Location = new Point(30, 404);
+            Player_Score.Name = "Player_Score";
+            Player_Score.Size = new Size(170, 30);
+            Player_Score.TabIndex = 10;
+            Player_Score.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // picHit
+            // 
+            picHit.BackColor = Color.Transparent;
+            picHit.Location = new Point(30, 532);
+            picHit.Name = "picHit";
+            picHit.Size = new Size(170, 194);
+            picHit.TabIndex = 11;
+            picHit.TabStop = false;
+            picHit.Click += picHit_Click;
+            // 
+            // picStand
+            // 
+            picStand.BackColor = Color.Transparent;
+            picStand.Location = new Point(30, 453);
+            picStand.Name = "picStand";
+            picStand.Size = new Size(192, 55);
+            picStand.TabIndex = 12;
+            picStand.TabStop = false;
+            picStand.Click += picStand_Click;
             // 
             // CatjackDeck
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RosyBrown;
-            ClientSize = new Size(914, 600);
-            Controls.Add(lblLose);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1359, 750);
+            Controls.Add(picStand);
+            Controls.Add(picHit);
             Controls.Add(lblTie);
-            Controls.Add(lblWin);
             Controls.Add(Player_Score);
+            Controls.Add(lblLose);
             Controls.Add(Computer_Score);
+            Controls.Add(picMenu);
+            Controls.Add(lblWin);
             Controls.Add(Computer_Panel);
-            Controls.Add(Stand_Button);
-            Controls.Add(Hit_button);
             Controls.Add(UserCards);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "CatjackDeck";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "CatJackForm";
             Load += CatjackDeck_Load;
+            ((System.ComponentModel.ISupportInitialize)picMenu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picHit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picStand).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button Hit_button;
-        private Button Stand_Button;
         private Panel Computer_Panel;
-        private TextBox Computer_Score;
-        private TextBox Player_Score;
         public Panel UserCards;
         private Label lblWin;
         private Label lblTie;
         private Label lblLose;
+        private PictureBox picMenu;
+        private Label Computer_Score;
+        private Label Player_Score;
+        private PictureBox picHit;
+        private PictureBox picStand;
     }
 }

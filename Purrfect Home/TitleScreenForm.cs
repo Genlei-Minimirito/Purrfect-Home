@@ -21,7 +21,7 @@ namespace Purrfect_Home
         private void picPlay_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form formSplash = new HomeForm();
+            Form formSplash = new SplashScreenForm();
             formSplash.StartPosition = FormStartPosition.Manual;
             formSplash.Location = this.Location;
             formSplash.ShowDialog();
