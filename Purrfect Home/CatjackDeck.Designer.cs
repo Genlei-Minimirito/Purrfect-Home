@@ -71,7 +71,7 @@
             lblWin.BackColor = Color.Transparent;
             lblWin.Font = new Font("Showcard Gothic", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblWin.ForeColor = Color.PeachPuff;
-            lblWin.Location = new Point(774, 308);
+            lblWin.Location = new Point(732, 309);
             lblWin.Name = "lblWin";
             lblWin.Size = new Size(152, 35);
             lblWin.TabIndex = 5;
@@ -84,7 +84,7 @@
             lblTie.BackColor = Color.Transparent;
             lblTie.Font = new Font("Showcard Gothic", 16.2F);
             lblTie.ForeColor = Color.PeachPuff;
-            lblTie.Location = new Point(823, 308);
+            lblTie.Location = new Point(781, 309);
             lblTie.Name = "lblTie";
             lblTie.Size = new Size(59, 35);
             lblTie.TabIndex = 6;
@@ -97,7 +97,7 @@
             lblLose.BackColor = Color.Transparent;
             lblLose.Font = new Font("Showcard Gothic", 16.2F);
             lblLose.ForeColor = Color.PeachPuff;
-            lblLose.Location = new Point(774, 308);
+            lblLose.Location = new Point(732, 309);
             lblLose.Name = "lblLose";
             lblLose.Size = new Size(157, 35);
             lblLose.TabIndex = 7;

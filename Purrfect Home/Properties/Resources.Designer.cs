@@ -173,6 +173,16 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CATJACK_THUMBNAIL {
+            get {
+                object obj = ResourceManager.GetObject("CATJACK_THUMBNAIL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CATJACK_UI {
             get {
                 object obj = ResourceManager.GetObject("CATJACK_UI", resourceCulture);
@@ -196,6 +206,16 @@ namespace Purrfect_Home.Properties {
         internal static System.Drawing.Bitmap HOME_UI {
             get {
                 object obj = ResourceManager.GetObject("HOME_UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap INFIXTOPAWSTFIX_UI {
+            get {
+                object obj = ResourceManager.GetObject("INFIXTOPAWSTFIX_UI", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

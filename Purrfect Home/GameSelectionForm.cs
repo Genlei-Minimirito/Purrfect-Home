@@ -1,4 +1,5 @@
 ﻿using catjack;
+using InfixToPawstfixGame;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,8 @@ namespace Purrfect_Home
             picNext.Hide();
             picNext2.Show();
             picBack.Show();
+            playCat.Hide();
+            playInfix.Show();
 
         }
 
@@ -48,6 +51,8 @@ namespace Purrfect_Home
             lblMemo.Show();
             picNext2.Hide();
             picBack2.Show();
+
+            playInfix.Hide();
 
 
         }
@@ -62,6 +67,9 @@ namespace Purrfect_Home
             lblCatJack.Show();
             picBack.Hide();
             picNext.Show();
+            playInfix.Hide();
+
+            playCat.Show();
 
         }
 
@@ -76,6 +84,10 @@ namespace Purrfect_Home
             picBack2.Hide();
             picBack.Show();
             picNext.Show();
+
+            playCat.Hide();
+            playInfix.Show();
+
 
         }
 
@@ -101,6 +113,15 @@ namespace Purrfect_Home
             formCatJack.StartPosition = FormStartPosition.Manual;
             formCatJack.Location = this.Location;
             formCatJack.ShowDialog();
+        }
+
+        private void playInfix_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form formInfix = new InfixToPawstFixForm();
+            formInfix.StartPosition = FormStartPosition.Manual;
+            formInfix.Location = this.Location;
+            formInfix.ShowDialog();
         }
     }
 }

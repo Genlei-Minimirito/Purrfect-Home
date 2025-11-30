@@ -43,6 +43,7 @@
             lblCatJack = new Label();
             lblInfixToPawsfix = new Label();
             lblMemo = new Label();
+            playInfix = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picCatJack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picHome).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picNext).BeginInit();
@@ -54,12 +55,13 @@
             ((System.ComponentModel.ISupportInitialize)picBack3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picNext3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMemo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)playInfix).BeginInit();
             SuspendLayout();
             // 
             // picCatJack
             // 
             picCatJack.BackColor = Color.Transparent;
-            picCatJack.BackgroundImage = (Image)resources.GetObject("picCatJack.BackgroundImage");
+            picCatJack.BackgroundImage = Properties.Resources.CATJACK_THUMBNAIL;
             picCatJack.BackgroundImageLayout = ImageLayout.Stretch;
             picCatJack.Location = new Point(657, 268);
             picCatJack.Name = "picCatJack";
@@ -214,6 +216,17 @@
             lblMemo.TextAlign = ContentAlignment.MiddleCenter;
             lblMemo.Visible = false;
             // 
+            // playInfix
+            // 
+            playInfix.BackColor = Color.Transparent;
+            playInfix.Location = new Point(104, 325);
+            playInfix.Name = "playInfix";
+            playInfix.Size = new Size(459, 151);
+            playInfix.TabIndex = 14;
+            playInfix.TabStop = false;
+            playInfix.Visible = false;
+            playInfix.Click += playInfix_Click;
+            // 
             // GameSelectionForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -221,6 +234,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1359, 749);
+            Controls.Add(playInfix);
             Controls.Add(lblMemo);
             Controls.Add(lblInfixToPawsfix);
             Controls.Add(lblCatJack);
@@ -251,6 +265,7 @@
             ((System.ComponentModel.ISupportInitialize)picBack3).EndInit();
             ((System.ComponentModel.ISupportInitialize)picNext3).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMemo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)playInfix).EndInit();
             ResumeLayout(false);
         }
 
@@ -270,5 +285,6 @@
         private Label lblCatJack;
         private Label lblInfixToPawsfix;
         private Label lblMemo;
+        private PictureBox playInfix;
     }
 }
