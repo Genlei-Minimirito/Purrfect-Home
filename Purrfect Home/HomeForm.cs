@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lagen;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Purrfect_Home
 {
     public partial class HomeForm : Form
     {
-        public HomeForm()
+        private string currentUserId;
+        public HomeForm(string userId)
         {
             InitializeComponent();
+            currentUserId = userId;
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
@@ -29,7 +32,7 @@ namespace Purrfect_Home
 
         private void picGames_Click(object sender, EventArgs e)
         {
-            Form formGame = new GameSelectionForm();
+            Form formGame = new GameSelectionForm(currentUserId);
             formGame.StartPosition = FormStartPosition.Manual;
             formGame.Location = this.Location;
             formGame.ShowDialog();
@@ -39,7 +42,7 @@ namespace Purrfect_Home
 
         private void picInv_Click(object sender, EventArgs e)
         {
-            Form formHome = new HomeForm();
+            Form formHome = new HomeForm(currentUserId);
             formHome.StartPosition = FormStartPosition.Manual;
             formHome.Location = this.Location;
             formHome.ShowDialog();
@@ -49,7 +52,7 @@ namespace Purrfect_Home
 
         private void picAdopt_Click(object sender, EventArgs e)
         {
-            Form formAdopt = new AdoptForm();
+            Form formAdopt = new AdoptForm(currentUserId);
             formAdopt.StartPosition = FormStartPosition.Manual;
             formAdopt.Location = this.Location;
             formAdopt.ShowDialog();
@@ -59,7 +62,7 @@ namespace Purrfect_Home
 
         private void picSettings_Click(object sender, EventArgs e)
         {
-            Form formHome = new HomeForm();
+            Form formHome = new login();
             formHome.StartPosition = FormStartPosition.Manual;
             formHome.Location = this.Location;
             formHome.ShowDialog();

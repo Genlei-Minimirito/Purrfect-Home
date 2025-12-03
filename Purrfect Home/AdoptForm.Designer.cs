@@ -54,7 +54,6 @@
             picWinterBanner.SizeMode = PictureBoxSizeMode.StretchImage;
             picWinterBanner.TabIndex = 0;
             picWinterBanner.TabStop = false;
-            picWinterBanner.Click += picWinterBanner_Click;
             // 
             // picWinterAdopt
             // 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 
 namespace Purrfect_Home
 {
@@ -8,80 +7,44 @@ namespace Purrfect_Home
     {
         private static Random rng = new Random();
 
-        // DROP RATES
-        private const int rate3 = 60; // 70%
-        private const int rate4 = 25; // 25%
-        private const int rate5 = 15;  // 5%
+        // Pools
+        private static readonly List<GachaResult> pool3 = new List<GachaResult>()
+        {
+            new GachaResult { Name = "SIAMESE CAT", Stars = 3, FilePath = @"C:\xampp\htdocs\gif\WINTER BANNER\SIAMESE CAT.gif" },
+            
+            
+            new GachaResult { Name = "WHITE POSA",      Stars = 3, FilePath = @"C:\xampp\htdocs\gif\WINTER BANNER\WHITE POSA.gif" }
+        };
 
-        // YOUR GACHA TABLE
-        private static Dictionary<int, List<GachaEntry>> gachaTable =
-            new Dictionary<int, List<GachaEntry>>()
-            {
-                {
-                    3, new List<GachaEntry>()
-                    {
-                        new GachaEntry
-                        {
-                            Image = Properties.Resources.SIAMESE_CAT,
-                            Name = "Siamese Cat"
-                        },
+        private static readonly List<GachaResult> pool4 = new List<GachaResult>()
+        {new GachaResult { Name = "SANTA CAT",    Stars = 4, FilePath = @"C:\xampp\htdocs\gif\WINTER BANNER\POSANG PASKO.gif" },
+         new GachaResult { Name = "REINDEER CAT", Stars = 4, FilePath = @"C:\xampp\htdocs\gif\WINTER BANNER\CHRISTMAS REINDEER IDLE.gif" }
+        };
 
+        private static readonly List<GachaResult> pool5 = new List<GachaResult>()
+        {
+            new GachaResult { Name = "CHRISTMAS TREE CAT", Stars = 5, FilePath = @"C:\xampp\htdocs\gif\WINTER BANNER\NAELAW NA POSA.gif" }
+        };
 
-                        new GachaEntry
-                        {
-                            Image = Properties.Resources.WHITE_POSA,
-                            Name = "White Cat"
-                        }
-                    }
-                },
-
-                {
-                    4, new List<GachaEntry>()
-                    {
-                        new GachaEntry
-                        {
-                            Image = Properties.Resources.POSANG_PASKO,
-                            Name = "Christmas Cat"
-                        },
-
-                        new GachaEntry
-                        {
-                            Image = Properties.Resources.CHRISTMAS_REINDEER_IDLE,
-                            Name = "Reindeer Cat"
-                        }
-                    }
-                },
-
-                {
-                    5, new List<GachaEntry>()
-                    {
-                        new GachaEntry
-                        {
-                            Image = Properties.Resources.NAELAW_NA_POSA,
-                            Name = "Christmas Tree Cat"
-                        }
-                    }
-                }
-            };
+        // Chances (sum should be 100 or be interpreted sequentially)
+        private const int chance3 = 75;
+        private const int chance4 = 20;
+        private const int chance5 = 5;
 
         public static GachaResult Roll()
         {
             int roll = rng.Next(1, 101);
-            int rarity;
 
-            if (roll <= rate3) rarity = 3;
-            else if (roll <= rate3 + rate4) rarity = 4;
-            else rarity = 5;
+            if (roll <= chance5)
+                return Pick(pool5);
+            if (roll <= chance5 + chance4)
+                return Pick(pool4);
+            return Pick(pool3);
+        }
 
-            List<GachaEntry> list = gachaTable[rarity];
-            GachaEntry chosen = list[rng.Next(list.Count)];
-
-            return new GachaResult
-            {
-                Stars = rarity,
-                Image = chosen.Image,
-                Name = chosen.Name
-            };
+        private static GachaResult Pick(List<GachaResult> list)
+        {
+            return list[rng.Next(list.Count)];
         }
     }
 }

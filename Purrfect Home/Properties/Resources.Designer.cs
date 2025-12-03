@@ -173,6 +173,16 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AVATAR_UI {
+            get {
+                object obj = ResourceManager.GetObject("AVATAR_UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BATCAT {
             get {
                 object obj = ResourceManager.GetObject("BATCAT", resourceCulture);
@@ -203,9 +213,49 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CATNIP_ASSET {
+            get {
+                object obj = ResourceManager.GetObject("CATNIP_ASSET", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CHECK_ASSET {
+            get {
+                object obj = ResourceManager.GetObject("CHECK_ASSET", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CHRISTMAS_REINDEER_IDLE {
             get {
                 object obj = ResourceManager.GetObject("CHRISTMAS_REINDEER_IDLE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DISPLAY_CAT_UI {
+            get {
+                object obj = ResourceManager.GetObject("DISPLAY_CAT_UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EDIT_ASSET {
+            get {
+                object obj = ResourceManager.GetObject("EDIT_ASSET", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +303,66 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap INVENTORY_UI {
+            get {
+                object obj = ResourceManager.GetObject("INVENTORY_UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap INVENTORY_UI_1 {
+            get {
+                object obj = ResourceManager.GetObject("INVENTORY_UI_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap INVENTORY_UI_2 {
+            get {
+                object obj = ResourceManager.GetObject("INVENTORY_UI_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap INVENTORY_UI_3 {
+            get {
+                object obj = ResourceManager.GetObject("INVENTORY_UI_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap INVENTORY_UI_4 {
+            get {
+                object obj = ResourceManager.GetObject("INVENTORY_UI_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap INVENTORY_UI_5 {
+            get {
+                object obj = ResourceManager.GetObject("INVENTORY_UI_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LEFT_ARROW {
             get {
                 object obj = ResourceManager.GetObject("LEFT_ARROW", resourceCulture);
@@ -266,6 +376,16 @@ namespace Purrfect_Home.Properties {
         internal static System.Drawing.Bitmap LIGHT_MODE_TITLE_SCREEN {
             get {
                 object obj = ResourceManager.GetObject("LIGHT_MODE_TITLE_SCREEN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LOG_IN_UI {
+            get {
+                object obj = ResourceManager.GetObject("LOG_IN_UI", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +443,16 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PROFILE_FRAME_ASSET {
+            get {
+                object obj = ResourceManager.GetObject("PROFILE_FRAME_ASSET", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RIGHT_ARROW {
             get {
                 object obj = ResourceManager.GetObject("RIGHT_ARROW", resourceCulture);
@@ -336,6 +466,16 @@ namespace Purrfect_Home.Properties {
         internal static System.Drawing.Bitmap SIAMESE_CAT {
             get {
                 object obj = ResourceManager.GetObject("SIAMESE_CAT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SIGN_UP_UI {
+            get {
+                object obj = ResourceManager.GetObject("SIGN_UP_UI", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

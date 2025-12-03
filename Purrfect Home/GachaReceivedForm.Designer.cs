@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GachaReceivedForm));
             picOkai = new PictureBox();
             picCat = new PictureBox();
+            lblStars = new Label();
             ((System.ComponentModel.ISupportInitialize)picOkai).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picCat).BeginInit();
             SuspendLayout();
@@ -55,6 +56,14 @@
             picCat.TabIndex = 1;
             picCat.TabStop = false;
             // 
+            // lblStars
+            // 
+            lblStars.AutoSize = true;
+            lblStars.Location = new Point(1014, 340);
+            lblStars.Name = "lblStars";
+            lblStars.Size = new Size(0, 20);
+            lblStars.TabIndex = 2;
+            // 
             // GachaReceivedForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -62,6 +71,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1359, 750);
+            Controls.Add(lblStars);
             Controls.Add(picCat);
             Controls.Add(picOkai);
             DoubleBuffered = true;
@@ -71,11 +81,13 @@
             ((System.ComponentModel.ISupportInitialize)picOkai).EndInit();
             ((System.ComponentModel.ISupportInitialize)picCat).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private PictureBox picOkai;
         private PictureBox picCat;
+        private Label lblStars;
     }
 }

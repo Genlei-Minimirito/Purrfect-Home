@@ -1,5 +1,6 @@
 ﻿using catjack;
 using InfixToPawstfixGame;
+using Lagen;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,17 +15,22 @@ namespace Purrfect_Home
 {
     public partial class GameSelectionForm : Form
     {
-        public GameSelectionForm()
+        string connectionString = "server=localhost;database=dbposagame;uid=root;pwd=;";
+        public string currentUserId;
+        public GameSelectionForm(string userId)
         {
             InitializeComponent();
+            currentUserId = userId;
         }
 
         private void picHome_Click(object sender, EventArgs e)
         {
-            Form formHome = new HomeForm();
+            Form formHome = new landingPage(currentUserId);
             formHome.StartPosition = FormStartPosition.Manual;
             formHome.Location = this.Location;
             formHome.ShowDialog();
+
+            this.Close();
         }
 
         private void picNext_Click(object sender, EventArgs e)
@@ -109,7 +115,7 @@ namespace Purrfect_Home
         private void playCat_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form formCatJack = new CatjackDeck();
+            Form formCatJack = new CatjackDeck(currentUserId);
             formCatJack.StartPosition = FormStartPosition.Manual;
             formCatJack.Location = this.Location;
             formCatJack.ShowDialog();
@@ -118,7 +124,7 @@ namespace Purrfect_Home
         private void playInfix_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form formInfix = new InfixToPawstFixForm();
+            Form formInfix = new InfixToPawstFixForm(currentUserId);
             formInfix.StartPosition = FormStartPosition.Manual;
             formInfix.Location = this.Location;
             formInfix.ShowDialog();
