@@ -55,6 +55,7 @@
             // picHome
             // 
             picHome.BackColor = Color.Transparent;
+            picHome.Cursor = Cursors.Cross;
             picHome.Location = new Point(361, 671);
             picHome.Name = "picHome";
             picHome.Size = new Size(97, 79);
@@ -65,6 +66,7 @@
             // picGames
             // 
             picGames.BackColor = Color.Transparent;
+            picGames.Cursor = Cursors.Cross;
             picGames.Location = new Point(464, 671);
             picGames.Name = "picGames";
             picGames.Size = new Size(89, 79);
@@ -75,6 +77,7 @@
             // picInv
             // 
             picInv.BackColor = Color.Transparent;
+            picInv.Cursor = Cursors.Cross;
             picInv.Location = new Point(559, 671);
             picInv.Name = "picInv";
             picInv.Size = new Size(95, 79);
@@ -85,6 +88,7 @@
             // picAdopt
             // 
             picAdopt.BackColor = Color.Transparent;
+            picAdopt.Cursor = Cursors.Cross;
             picAdopt.Location = new Point(660, 671);
             picAdopt.Name = "picAdopt";
             picAdopt.Size = new Size(90, 79);
@@ -95,6 +99,7 @@
             // picSettings
             // 
             picSettings.BackColor = Color.Transparent;
+            picSettings.Cursor = Cursors.Cross;
             picSettings.Location = new Point(756, 671);
             picSettings.Name = "picSettings";
             picSettings.Size = new Size(95, 79);
@@ -105,6 +110,7 @@
             // picExit
             // 
             picExit.BackColor = Color.Transparent;
+            picExit.Cursor = Cursors.Cross;
             picExit.Location = new Point(857, 671);
             picExit.Name = "picExit";
             picExit.Size = new Size(88, 79);

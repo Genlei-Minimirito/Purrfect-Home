@@ -79,5 +79,10 @@ namespace Purrfect_Home
             home.StartPosition = FormStartPosition.CenterScreen;
             home.Show();
         }
+
+        private void picSplash_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

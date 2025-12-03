@@ -106,6 +106,7 @@ namespace catjack
             formMenu.StartPosition = FormStartPosition.Manual;
             formMenu.Location = this.Location;
             formMenu.ShowDialog();
+            this.Close();
         }
 
        

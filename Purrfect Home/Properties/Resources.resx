@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ADOPT_ANIMATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ADOPT ANIMATION.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BATCAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BATCAT.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -126,6 +129,12 @@
   </data>
   <data name="CATJACK_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CATJACK UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CHRISTMAS_REINDEER_IDLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CHRISTMAS REINDEER IDLE.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GACHA_RECEIVE_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GACHA RECEIVE UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GAME_SELECTION_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GAME SELECTION UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,8 +145,14 @@
   <data name="INFIXTOPAWSTFIX_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\INFIXTOPAWSTFIX UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LEFT_ARROW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LEFT ARROW.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LIGHT_MODE_TITLE_SCREEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LIGHT MODE TITLE SCREEN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NAELAW_NA_POSA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NAELAW NA POSA.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NIGHT_MODE_TITLE_SCREEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NIGHT MODE TITLE SCREEN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +166,23 @@
   <data name="POSA_NA_TIGER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\POSA NA TIGER.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="RIGHT_ARROW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RIGHT ARROW.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SIAMESE_CAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SIAMESE CAT.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SPLASH_SCREEN_ANIMATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SPLASH SCREEN ANIMATION.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WHITE_CAT_JUMP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WHITE CAT JUMP.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WHITE_POSA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WHITE POSA.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WINTER_BANNER_ANIMATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WINTER BANNER ANIMATION.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CARDS\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

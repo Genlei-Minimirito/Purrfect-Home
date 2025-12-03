@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatjackDeck));
             UserCards = new Panel();
             Computer_Panel = new Panel();
             lblWin = new Label();
@@ -161,7 +160,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.RosyBrown;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Purrfect_Home.Properties.Resources.CATJACK_UI;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1359, 750);
             Controls.Add(picStand);

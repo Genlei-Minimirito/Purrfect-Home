@@ -33,6 +33,8 @@ namespace Purrfect_Home
             formGame.StartPosition = FormStartPosition.Manual;
             formGame.Location = this.Location;
             formGame.ShowDialog();
+
+            this.Close();
         }
 
         private void picInv_Click(object sender, EventArgs e)
@@ -41,14 +43,18 @@ namespace Purrfect_Home
             formHome.StartPosition = FormStartPosition.Manual;
             formHome.Location = this.Location;
             formHome.ShowDialog();
+
+            this.Close();
         }
 
         private void picAdopt_Click(object sender, EventArgs e)
         {
-            Form formHome = new HomeForm();
-            formHome.StartPosition = FormStartPosition.Manual;
-            formHome.Location = this.Location;
-            formHome.ShowDialog();
+            Form formAdopt = new AdoptForm();
+            formAdopt.StartPosition = FormStartPosition.Manual;
+            formAdopt.Location = this.Location;
+            formAdopt.ShowDialog();
+
+            this.Close();
         }
 
         private void picSettings_Click(object sender, EventArgs e)
@@ -57,6 +63,8 @@ namespace Purrfect_Home
             formHome.StartPosition = FormStartPosition.Manual;
             formHome.Location = this.Location;
             formHome.ShowDialog();
+
+            this.Close();
         }
 
         private void picExit_Click(object sender, EventArgs e)

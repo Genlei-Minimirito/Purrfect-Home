@@ -163,6 +163,16 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ADOPT_ANIMATION {
+            get {
+                object obj = ResourceManager.GetObject("ADOPT_ANIMATION", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BATCAT {
             get {
                 object obj = ResourceManager.GetObject("BATCAT", resourceCulture);
@@ -186,6 +196,26 @@ namespace Purrfect_Home.Properties {
         internal static System.Drawing.Bitmap CATJACK_UI {
             get {
                 object obj = ResourceManager.GetObject("CATJACK_UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CHRISTMAS_REINDEER_IDLE {
+            get {
+                object obj = ResourceManager.GetObject("CHRISTMAS_REINDEER_IDLE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GACHA_RECEIVE_UI {
+            get {
+                object obj = ResourceManager.GetObject("GACHA_RECEIVE_UI", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +253,29 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LEFT_ARROW {
+            get {
+                object obj = ResourceManager.GetObject("LEFT_ARROW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LIGHT_MODE_TITLE_SCREEN {
             get {
                 object obj = ResourceManager.GetObject("LIGHT_MODE_TITLE_SCREEN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NAELAW_NA_POSA {
+            get {
+                object obj = ResourceManager.GetObject("NAELAW_NA_POSA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +323,59 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RIGHT_ARROW {
+            get {
+                object obj = ResourceManager.GetObject("RIGHT_ARROW", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SIAMESE_CAT {
+            get {
+                object obj = ResourceManager.GetObject("SIAMESE_CAT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SPLASH_SCREEN_ANIMATION {
             get {
                 object obj = ResourceManager.GetObject("SPLASH_SCREEN_ANIMATION", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WHITE_CAT_JUMP {
+            get {
+                object obj = ResourceManager.GetObject("WHITE_CAT_JUMP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WHITE_POSA {
+            get {
+                object obj = ResourceManager.GetObject("WHITE_POSA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WINTER_BANNER_ANIMATION {
+            get {
+                object obj = ResourceManager.GetObject("WINTER_BANNER_ANIMATION", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

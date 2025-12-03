@@ -42,6 +42,7 @@
             picSplash.Size = new Size(1362, 759);
             picSplash.TabIndex = 0;
             picSplash.TabStop = false;
+            picSplash.Click += picSplash_Click;
             // 
             // SplashScreenForm
             // 
