@@ -121,6 +121,9 @@
   <data name="ADOPT_ANIMATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ADOPT ANIMATION.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AVATAR_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AVATAR UI.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BATCAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BATCAT.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,8 +133,20 @@
   <data name="CATJACK_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CATJACK UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CATNIP_ASSET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CATNIP ASSET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CHECK_ASSET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CHECK ASSET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CHRISTMAS_REINDEER_IDLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CHRISTMAS REINDEER IDLE.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DISPLAY_CAT_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DISPLAY CAT UI.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EDIT_ASSET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EDIT ASSET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GACHA_RECEIVE_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GACHA RECEIVE UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,11 +160,32 @@
   <data name="INFIXTOPAWSTFIX_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\INFIXTOPAWSTFIX UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="INVENTORY_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INVENTORY UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INVENTORY_UI_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INVENTORY UI 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INVENTORY_UI_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INVENTORY UI 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INVENTORY_UI_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INVENTORY UI 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INVENTORY_UI_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INVENTORY UI 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INVENTORY_UI_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INVENTORY UI 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="LEFT_ARROW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LEFT ARROW.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LIGHT_MODE_TITLE_SCREEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LIGHT MODE TITLE SCREEN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LOG_IN_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LOG IN UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NAELAW_NA_POSA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NAELAW NA POSA.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +202,17 @@
   <data name="POSA_NA_TIGER" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\POSA NA TIGER.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PROFILE_FRAME_ASSET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PROFILE FRAME ASSET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RIGHT_ARROW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RIGHT ARROW.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SIAMESE_CAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SIAMESE CAT.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SIGN_UP_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SIGN UP UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SPLASH_SCREEN_ANIMATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SPLASH SCREEN ANIMATION.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

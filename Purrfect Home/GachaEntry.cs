@@ -9,8 +9,11 @@ namespace Purrfect_Home
 {
     public class GachaEntry
     {
-        public Image Image { get; set; }
         public string Name { get; set; }
+        public string FilePath { get; set; }
+        public int Stars { get; set; }
     }
+
+
 }
 

@@ -1,16 +1,18 @@
+using Lagen;
 using Purrfect_Home;
 
 namespace catjack
 {
     public partial class CatjackDeck : Form
     {
-
+        private string currentUserId;
         int UserCardSum = 0;
         int ComputerCardSum = 0;
 
-        public CatjackDeck()
+        public CatjackDeck(string userId)
         {
             InitializeComponent();
+            currentUserId = userId;
 
         }
 
@@ -101,11 +103,11 @@ namespace catjack
 
         private void picMenu_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form formMenu = new HomeForm();
-            formMenu.StartPosition = FormStartPosition.Manual;
-            formMenu.Location = this.Location;
-            formMenu.ShowDialog();
+            Form formHome = new GameSelectionForm(currentUserId);
+            formHome.StartPosition = FormStartPosition.Manual;
+            formHome.Location = this.Location;
+            formHome.ShowDialog();
+
             this.Close();
         }
 

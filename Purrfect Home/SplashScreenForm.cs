@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lagen;
+using System;
 using System.Windows.Forms;
 using Timer = System.Windows.Forms.Timer;
 
@@ -75,7 +76,7 @@ namespace Purrfect_Home
         private void OpenMainMenu()
         {
             this.Hide();
-            HomeForm home = new HomeForm();
+            Form home = new login();
             home.StartPosition = FormStartPosition.CenterScreen;
             home.Show();
         }

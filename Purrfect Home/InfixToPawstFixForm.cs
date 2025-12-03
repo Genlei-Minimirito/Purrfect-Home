@@ -8,15 +8,16 @@ namespace InfixToPawstfixGame
 {
     public partial class InfixToPawstFixForm : Form
     {
+        private string currentUserId;
         private int currentRound = 0;
         private int points = 0;
         private bool choicesLocked = false;
         private Random rand = new Random();
 
-        public InfixToPawstFixForm()
+        public InfixToPawstFixForm(string userId)
         {
             InitializeComponent();
-
+            currentUserId = userId; 
             lblChoice1.Click += lblChoice1_Click;
             lblChoice2.Click += lblChoice2_Click;
             lblChoice3.Click += lblChoice3_Click;
@@ -233,7 +234,7 @@ namespace InfixToPawstfixGame
         private void picMenu_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form m = new HomeForm();
+            Form m = new GameSelectionForm(currentUserId);
             m.StartPosition = FormStartPosition.Manual;
             m.Location = this.Location;
             m.ShowDialog();

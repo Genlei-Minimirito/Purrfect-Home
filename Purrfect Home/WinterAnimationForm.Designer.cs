@@ -42,6 +42,7 @@
             picGachaAnimation.SizeMode = PictureBoxSizeMode.StretchImage;
             picGachaAnimation.TabIndex = 0;
             picGachaAnimation.TabStop = false;
+           
             // 
             // WinterAnimationForm
             // 
