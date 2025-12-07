@@ -83,6 +83,7 @@
             lblChoice2.TabIndex = 9;
             lblChoice2.Text = "INFIX";
             lblChoice2.TextAlign = ContentAlignment.MiddleLeft;
+            
             // 
             // lblPoints
             // 

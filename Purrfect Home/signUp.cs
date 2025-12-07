@@ -65,7 +65,7 @@ namespace Lagen
                 }
 
                 // 3. INSERT into database
-                string defAvatar = "C:\\xampp\\htdocs\\Game_Avatars\\avaatr1.jpg";
+                string defAvatar = "C:\\ACADS\\BSCS 2B\\DEFAULT PROFILE.jpg";
                 int coins = 0;
 
                 MySqlCommand insert = new MySqlCommand(

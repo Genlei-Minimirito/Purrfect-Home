@@ -37,10 +37,12 @@
             txtBio = new TextBox();
             btnApplychanges = new PictureBox();
             editAvatar = new PictureBox();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)btnBack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnAvatar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnApplychanges).BeginInit();
             ((System.ComponentModel.ISupportInitialize)editAvatar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnBack
@@ -60,10 +62,10 @@
             btnAvatar.BackgroundImageLayout = ImageLayout.Stretch;
             btnAvatar.BorderStyle = BorderStyle.FixedSingle;
             btnAvatar.Enabled = false;
-            btnAvatar.Location = new Point(204, 240);
+            btnAvatar.Location = new Point(204, 235);
             btnAvatar.Margin = new Padding(3, 4, 3, 4);
             btnAvatar.Name = "btnAvatar";
-            btnAvatar.Size = new Size(251, 256);
+            btnAvatar.Size = new Size(252, 268);
             btnAvatar.SizeMode = PictureBoxSizeMode.StretchImage;
             btnAvatar.TabIndex = 1;
             btnAvatar.TabStop = false;
@@ -112,12 +114,12 @@
             txtBio.Enabled = false;
             txtBio.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtBio.ForeColor = Color.Black;
-            txtBio.Location = new Point(688, 467);
+            txtBio.Location = new Point(681, 467);
             txtBio.Margin = new Padding(3, 4, 3, 4);
             txtBio.Multiline = true;
             txtBio.Name = "txtBio";
             txtBio.ReadOnly = true;
-            txtBio.Size = new Size(249, 207);
+            txtBio.Size = new Size(256, 197);
             txtBio.TabIndex = 6;
             // 
             // btnApplychanges
@@ -148,6 +150,17 @@
             editAvatar.TabStop = false;
             editAvatar.Click += editAvatar_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(351, 166);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(154, 89);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            // 
             // avatar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -155,6 +168,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1209, 887);
+            Controls.Add(pictureBox1);
             Controls.Add(editAvatar);
             Controls.Add(btnApplychanges);
             Controls.Add(txtBio);
@@ -173,6 +187,7 @@
             ((System.ComponentModel.ISupportInitialize)btnAvatar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnApplychanges).EndInit();
             ((System.ComponentModel.ISupportInitialize)editAvatar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -187,5 +202,6 @@
         private TextBox txtBio;
         private PictureBox btnApplychanges;
         private PictureBox editAvatar;
+        private PictureBox pictureBox1;
     }
 }

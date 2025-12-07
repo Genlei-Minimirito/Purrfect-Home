@@ -39,11 +39,12 @@
             picBack2 = new PictureBox();
             picBack3 = new PictureBox();
             picNext3 = new PictureBox();
-            picMemo = new PictureBox();
+            picCatchFood = new PictureBox();
             lblCatJack = new Label();
             lblInfixToPawsfix = new Label();
-            lblMemo = new Label();
+            lblCatchFood = new Label();
             playInfix = new PictureBox();
+            playCatchFood = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picCatJack).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picHome).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picNext).BeginInit();
@@ -54,8 +55,9 @@
             ((System.ComponentModel.ISupportInitialize)picBack2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picBack3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picNext3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picMemo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picCatchFood).BeginInit();
             ((System.ComponentModel.ISupportInitialize)playInfix).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)playCatchFood).BeginInit();
             SuspendLayout();
             // 
             // picCatJack
@@ -113,7 +115,7 @@
             // picInfixToPawsfix
             // 
             picInfixToPawsfix.BackColor = Color.Transparent;
-            picInfixToPawsfix.BackgroundImage = Properties.Resources.NIGHT_MODE_TITLE_SCREEN;
+            picInfixToPawsfix.BackgroundImage = (Image)resources.GetObject("picInfixToPawsfix.BackgroundImage");
             picInfixToPawsfix.BackgroundImageLayout = ImageLayout.Stretch;
             picInfixToPawsfix.Location = new Point(657, 268);
             picInfixToPawsfix.Name = "picInfixToPawsfix";
@@ -166,17 +168,17 @@
             picNext3.Visible = false;
             picNext3.Click += picNext3_Click;
             // 
-            // picMemo
+            // picCatchFood
             // 
-            picMemo.BackColor = Color.Transparent;
-            picMemo.BackgroundImage = Properties.Resources.HOME_UI;
-            picMemo.BackgroundImageLayout = ImageLayout.Stretch;
-            picMemo.Location = new Point(657, 268);
-            picMemo.Name = "picMemo";
-            picMemo.Size = new Size(526, 224);
-            picMemo.TabIndex = 10;
-            picMemo.TabStop = false;
-            picMemo.Visible = false;
+            picCatchFood.BackColor = Color.Transparent;
+            picCatchFood.BackgroundImage = Properties.Resources.HOME_UI;
+            picCatchFood.BackgroundImageLayout = ImageLayout.Stretch;
+            picCatchFood.Location = new Point(657, 268);
+            picCatchFood.Name = "picCatchFood";
+            picCatchFood.Size = new Size(526, 224);
+            picCatchFood.TabIndex = 10;
+            picCatchFood.TabStop = false;
+            picCatchFood.Visible = false;
             // 
             // lblCatJack
             // 
@@ -203,18 +205,18 @@
             lblInfixToPawsfix.TextAlign = ContentAlignment.MiddleCenter;
             lblInfixToPawsfix.Visible = false;
             // 
-            // lblMemo
+            // lblCatchFood
             // 
-            lblMemo.BackColor = Color.Transparent;
-            lblMemo.Font = new Font("Ink Free", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMemo.ForeColor = SystemColors.ButtonHighlight;
-            lblMemo.Location = new Point(639, 149);
-            lblMemo.Name = "lblMemo";
-            lblMemo.Size = new Size(574, 75);
-            lblMemo.TabIndex = 13;
-            lblMemo.Text = "KITTY MEMORY";
-            lblMemo.TextAlign = ContentAlignment.MiddleCenter;
-            lblMemo.Visible = false;
+            lblCatchFood.BackColor = Color.Transparent;
+            lblCatchFood.Font = new Font("Ink Free", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblCatchFood.ForeColor = SystemColors.ButtonHighlight;
+            lblCatchFood.Location = new Point(639, 149);
+            lblCatchFood.Name = "lblCatchFood";
+            lblCatchFood.Size = new Size(574, 75);
+            lblCatchFood.TabIndex = 13;
+            lblCatchFood.Text = "CAT-CH FOOD";
+            lblCatchFood.TextAlign = ContentAlignment.MiddleCenter;
+            lblCatchFood.Visible = false;
             // 
             // playInfix
             // 
@@ -227,6 +229,17 @@
             playInfix.Visible = false;
             playInfix.Click += playInfix_Click;
             // 
+            // playCatchFood
+            // 
+            playCatchFood.BackColor = Color.Transparent;
+            playCatchFood.Location = new Point(104, 325);
+            playCatchFood.Name = "playCatchFood";
+            playCatchFood.Size = new Size(459, 151);
+            playCatchFood.TabIndex = 15;
+            playCatchFood.TabStop = false;
+            playCatchFood.Visible = false;
+            playCatchFood.Click += picBoxCatchFood_Click;
+            // 
             // GameSelectionForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -234,11 +247,12 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1359, 749);
+            Controls.Add(playCatchFood);
             Controls.Add(playInfix);
-            Controls.Add(lblMemo);
+            Controls.Add(lblCatchFood);
             Controls.Add(lblInfixToPawsfix);
             Controls.Add(lblCatJack);
-            Controls.Add(picMemo);
+            Controls.Add(picCatchFood);
             Controls.Add(picNext3);
             Controls.Add(picBack3);
             Controls.Add(picBack2);
@@ -264,8 +278,9 @@
             ((System.ComponentModel.ISupportInitialize)picBack2).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBack3).EndInit();
             ((System.ComponentModel.ISupportInitialize)picNext3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picMemo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picCatchFood).EndInit();
             ((System.ComponentModel.ISupportInitialize)playInfix).EndInit();
+            ((System.ComponentModel.ISupportInitialize)playCatchFood).EndInit();
             ResumeLayout(false);
         }
 
@@ -281,10 +296,11 @@
         private PictureBox picBack2;
         private PictureBox picBack3;
         private PictureBox picNext3;
-        private PictureBox picMemo;
+        private PictureBox picCatchFood;
         private Label lblCatJack;
         private Label lblInfixToPawsfix;
-        private Label lblMemo;
+        private Label lblCatchFood;
         private PictureBox playInfix;
+        private PictureBox playCatchFood;
     }
 }

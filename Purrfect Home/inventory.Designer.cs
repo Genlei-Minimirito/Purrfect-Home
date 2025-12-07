@@ -91,7 +91,7 @@
             // invent4
             // 
             invent4.BackColor = Color.Transparent;
-            invent4.Location = new Point(613, 406);
+            invent4.Location = new Point(617, 408);
             invent4.Margin = new Padding(3, 4, 3, 4);
             invent4.Name = "invent4";
             invent4.Size = new Size(176, 161);

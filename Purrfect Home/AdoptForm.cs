@@ -9,7 +9,6 @@ namespace Purrfect_Home
     public partial class AdoptForm : Form
     {
         private string connectionString = "server=localhost;database=dbposagame;uid=root;pwd=;";
-
         public string currentUserId;
         public string CurrentUsername { get { return currentUserId; } }
 
@@ -64,7 +63,7 @@ namespace Purrfect_Home
                 return;
             }
 
-            // Insert new cat (store path)
+            // Insert new cat
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
@@ -83,8 +82,31 @@ namespace Purrfect_Home
             MessageBox.Show("New cat added to inventory!");
         }
 
+        // -----------------------------
+        // NEW FUNCTION — GET USER COINS
+        // -----------------------------
+        public int GetUserCoins(string username)
+        {
+            int coins = 0;
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT coins FROM tbaccountdetails WHERE username=@u";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@u", username);
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                        coins = Convert.ToInt32(result);
+                }
+            }
+            return coins;
+        }
+
         private void picWinterAdopt_Click(object sender, EventArgs e)
         {
+            // 1. Check cat limit (max 5)
             if (UserHasFiveCats(currentUserId))
             {
                 MessageBox.Show(
@@ -93,17 +115,45 @@ namespace Purrfect_Home
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
-                return;  // Stop here — do not pull
+                return;
             }
-            WinterAnimationForm anim = new WinterAnimationForm(this);
 
+            // 2. Check if user has at least 5 coins
+            int coins = GetUserCoins(currentUserId);
+
+            if (coins < 5)
+            {
+                MessageBox.Show(
+                    "You need at least 5 Catnip/Coins to adopt a cat.",
+                    "Not Enough Coins",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            // 3. Deduct 5 coins
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string update = "UPDATE tbaccountdetails SET coins = coins - 5 WHERE username=@u";
+                using (MySqlCommand cmd = new MySqlCommand(update, conn))
+                {
+                    cmd.Parameters.AddWithValue("@u", currentUserId);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            MessageBox.Show("5 coins deducted for adoption!", "Adoption Paid");
+
+            // 4. Continue adoption animation
+            WinterAnimationForm anim = new WinterAnimationForm(this);
             anim.StartPosition = FormStartPosition.Manual;
             anim.Location = this.Location;
 
             anim.Show();
             this.Hide();
         }
-
 
         private void picHome_Click(object sender, EventArgs e)
         {

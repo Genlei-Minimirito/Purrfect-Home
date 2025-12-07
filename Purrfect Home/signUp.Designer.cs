@@ -113,7 +113,7 @@
             BtnloginHere.Location = new Point(796, 697);
             BtnloginHere.Margin = new Padding(3, 4, 3, 4);
             BtnloginHere.Name = "BtnloginHere";
-            BtnloginHere.Size = new Size(187, 40);
+            BtnloginHere.Size = new Size(168, 30);
             BtnloginHere.TabIndex = 14;
             BtnloginHere.TabStop = false;
             BtnloginHere.Click += BtnloginHere_Click;

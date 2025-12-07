@@ -70,11 +70,12 @@
             lblWin.BackColor = Color.Transparent;
             lblWin.Font = new Font("Showcard Gothic", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblWin.ForeColor = Color.PeachPuff;
-            lblWin.Location = new Point(732, 309);
+            lblWin.Location = new Point(637, 309);
             lblWin.Name = "lblWin";
-            lblWin.Size = new Size(152, 35);
+            lblWin.Size = new Size(356, 70);
             lblWin.TabIndex = 5;
-            lblWin.Text = "You Win!";
+            lblWin.Text = "You Win!\r\nYOU OBTAINED 1 CATNIP!";
+            lblWin.TextAlign = ContentAlignment.MiddleCenter;
             lblWin.Visible = false;
             // 
             // lblTie
