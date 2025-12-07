@@ -1,6 +1,7 @@
 ﻿using catjack;
 using InfixToPawstfixGame;
 using Lagen;
+using PurrMemory;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,15 +37,16 @@ namespace Purrfect_Home
         private void picNext_Click(object sender, EventArgs e)
         {
             picCatJack.Hide();
-            picMemo.Hide();
+            picCatchFood.Hide();
             picInfixToPawsfix.Show();
             lblCatJack.Hide();
-            lblMemo.Hide();
+            lblCatchFood.Hide();
             lblInfixToPawsfix.Show();
             picNext.Hide();
             picNext2.Show();
             picBack.Show();
             playCat.Hide();
+            playCatchFood.Hide();
             playInfix.Show();
 
         }
@@ -52,13 +54,17 @@ namespace Purrfect_Home
         private void picNext2_Click(object sender, EventArgs e)
         {
             picInfixToPawsfix.Hide();
-            picMemo.Show();
+            picCatJack.Hide();
+            picCatchFood.Show();
+            lblCatJack.Hide();
             lblInfixToPawsfix.Hide();
-            lblMemo.Show();
+            lblCatchFood.Show();
             picNext2.Hide();
             picBack2.Show();
-
+            playCatchFood.Show();
             playInfix.Hide();
+            playCat.Hide();
+
 
 
         }
@@ -66,31 +72,32 @@ namespace Purrfect_Home
         private void picBack_Click(object sender, EventArgs e)
         {
             picInfixToPawsfix.Hide();
-            picMemo.Hide();
+            picCatchFood.Hide();
             picCatJack.Show();
             lblInfixToPawsfix.Hide();
-            lblMemo.Hide();
+            lblCatchFood.Hide();
             lblCatJack.Show();
             picBack.Hide();
             picNext.Show();
             playInfix.Hide();
-
+            picNext2.Hide();
             playCat.Show();
+            playCatchFood.Hide();
 
         }
 
         private void picBack2_Click(object sender, EventArgs e)
         {
             picCatJack.Hide();
-            picMemo.Hide();
+            picCatchFood.Hide();
             lblCatJack.Hide();
-            lblMemo.Hide();
+            lblCatchFood.Hide();
             picInfixToPawsfix.Show();
             lblInfixToPawsfix.Show();
             picBack2.Hide();
             picBack.Show();
             picNext.Show();
-
+            playCatchFood.Hide();
             playCat.Hide();
             playInfix.Show();
 
@@ -119,6 +126,7 @@ namespace Purrfect_Home
             formCatJack.StartPosition = FormStartPosition.Manual;
             formCatJack.Location = this.Location;
             formCatJack.ShowDialog();
+            this.Close();
         }
 
         private void playInfix_Click(object sender, EventArgs e)
@@ -128,6 +136,17 @@ namespace Purrfect_Home
             formInfix.StartPosition = FormStartPosition.Manual;
             formInfix.Location = this.Location;
             formInfix.ShowDialog();
+            this.Close();
+        }
+
+        private void picBoxCatchFood_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form formCatchFood = new CatcbFoodForm(currentUserId);
+            formCatchFood.StartPosition = FormStartPosition.Manual;
+            formCatchFood.Location = this.Location;
+            formCatchFood.ShowDialog();
+            this.Close();
         }
     }
 }

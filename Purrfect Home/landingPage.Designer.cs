@@ -72,7 +72,7 @@
             // cat2
             // 
             cat2.BackColor = Color.Transparent;
-            cat2.Location = new Point(526, 503);
+            cat2.Location = new Point(622, 477);
             cat2.Margin = new Padding(3, 4, 3, 4);
             cat2.Name = "cat2";
             cat2.Size = new Size(107, 96);

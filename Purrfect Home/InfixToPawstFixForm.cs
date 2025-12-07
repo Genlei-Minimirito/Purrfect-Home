@@ -1,3 +1,4 @@
+using MySql.Data.MySqlClient;
 using Purrfect_Home;
 using System;
 using System.Collections.Generic;
@@ -8,16 +9,19 @@ namespace InfixToPawstfixGame
 {
     public partial class InfixToPawstFixForm : Form
     {
-        private string currentUserId;
+        private string currentUserId;   // actually the username
         private int currentRound = 0;
         private int points = 0;
         private bool choicesLocked = false;
         private Random rand = new Random();
 
+        private string connectionString = "server=localhost;database=dbposagame;uid=root;pwd=;";
+
         public InfixToPawstFixForm(string userId)
         {
             InitializeComponent();
-            currentUserId = userId; 
+            currentUserId = userId;
+
             lblChoice1.Click += lblChoice1_Click;
             lblChoice2.Click += lblChoice2_Click;
             lblChoice3.Click += lblChoice3_Click;
@@ -29,9 +33,9 @@ namespace InfixToPawstfixGame
             StartGame();
         }
 
-        // ------------------------------
+        // -----------------------------------------------------
         // GAME SETUP
-        // ------------------------------
+        // -----------------------------------------------------
         private void StartGame()
         {
             currentRound = 0;
@@ -42,11 +46,9 @@ namespace InfixToPawstfixGame
 
         private void NextRound()
         {
-            if (currentRound >= 5)
+            if (currentRound >= 10)
             {
-                string msg = (points == 5) ? "YOU WIN! PERFECT SCORE!" : $"Game Over. Score: {points}/5";
-                MessageBox.Show(msg, "Game Finished");
-                StartGame();
+                EndGame();
                 return;
             }
 
@@ -54,15 +56,11 @@ namespace InfixToPawstfixGame
             lblCorrectAns.Text = "";
             choicesLocked = false;
 
-            // --------------------------
-            // Generate HARD expression
-            // --------------------------
             string infix = GenerateHardInfix();
             string postfix = InfixToPostfix(infix);
 
             lblGiven.Text = infix;
 
-            // Build answer choices
             List<string> choices = new List<string> { postfix };
 
             while (choices.Count < 3)
@@ -72,7 +70,6 @@ namespace InfixToPawstfixGame
                     choices.Add(wrong);
             }
 
-            // Shuffle
             for (int i = 0; i < 10; i++)
             {
                 int a = rand.Next(3);
@@ -87,40 +84,27 @@ namespace InfixToPawstfixGame
             currentRound++;
         }
 
-        // ------------------------------------------------
-        // HARD INFIX EXPRESSION GENERATOR
-        // ------------------------------------------------
+        // -----------------------------------------------------
+        // HARD INFIX GENERATOR
+        // -----------------------------------------------------
         private string GenerateHardInfix()
         {
-            // Example outputs:
-            // (A+B)*(C-D/E)
-            // A*(B+C*(D-E))
-            // (A+B*C-D)/(E-F)
-            // A*(B-(C+D)/E)+F
-
             string[] ops = { "+", "-", "*", "/" };
             string[] vars = { "A", "B", "C", "D", "E", "F" };
 
             string RandVar() => vars[rand.Next(vars.Length)];
             string RandOp() => ops[rand.Next(ops.Length)];
 
-            // Build something like:
-            // (X op X) op (X op X op X)
             string left = $"({RandVar()}{RandOp()}{RandVar()})";
-
             string mid = $"{RandVar()}{RandOp()}{RandVar()}";
-
             string right = $"({mid}{RandOp()}{RandVar()})";
 
-            // final combine
-            string final = $"{left}{RandOp()}{right}";
-
-            return final;
+            return $"{left}{RandOp()}{right}";
         }
 
-        // ------------------------------------------------
-        // REAL INFIX ? POSTFIX USING STACK (POP / PUSH)
-        // ------------------------------------------------
+        // -----------------------------------------------------
+        // INFIX ? POSTFIX
+        // -----------------------------------------------------
         private string InfixToPostfix(string infix)
         {
             Stack<char> stack = new Stack<char>();
@@ -134,7 +118,7 @@ namespace InfixToPawstfixGame
                     '-' => 1,
                     '*' => 2,
                     '/' => 2,
-                    _ => 0
+                    _ => 0,
                 };
             }
 
@@ -142,7 +126,6 @@ namespace InfixToPawstfixGame
             {
                 if (char.IsLetter(ch))
                 {
-                    // Operand ? directly to output
                     output += ch;
                 }
                 else if (ch == '(')
@@ -151,14 +134,12 @@ namespace InfixToPawstfixGame
                 }
                 else if (ch == ')')
                 {
-                    // POP until '('
                     while (stack.Count > 0 && stack.Peek() != '(')
                         output += stack.Pop();
-                    stack.Pop(); // remove '('
+                    stack.Pop();
                 }
                 else if ("+-*/".Contains(ch))
                 {
-                    // POP while stack top has higher or equal precedence
                     while (stack.Count > 0 && Prec(stack.Peek()) >= Prec(ch))
                         output += stack.Pop();
 
@@ -166,31 +147,27 @@ namespace InfixToPawstfixGame
                 }
             }
 
-            // POP remaining operators
             while (stack.Count > 0)
                 output += stack.Pop();
 
             return output;
         }
 
-        // ------------------------------------------------
-        // WRONG ANSWER GENERATOR (slightly scrambled postfix)
-        // ------------------------------------------------
+        // -----------------------------------------------------
+        // WRONG POSTFIX (random scramble)
+        // -----------------------------------------------------
         private string GenerateWrongPostfix(string postfix)
         {
             char[] arr = postfix.ToCharArray();
-
-            // randomly swap two positions
             int a = rand.Next(arr.Length);
             int b = rand.Next(arr.Length);
             (arr[a], arr[b]) = (arr[b], arr[a]);
-
             return new string(arr);
         }
 
-        // ------------------------------------------------
-        // ANSWER CHECKING
-        // ------------------------------------------------
+        // -----------------------------------------------------
+        // CHECK ANSWER
+        // -----------------------------------------------------
         private void CheckAnswer(Label selectedChoice)
         {
             if (choicesLocked) return;
@@ -229,6 +206,57 @@ namespace InfixToPawstfixGame
             lblChoice1.ForeColor = Color.Black;
             lblChoice2.ForeColor = Color.Black;
             lblChoice3.ForeColor = Color.Black;
+        }
+
+        // -----------------------------------------------------
+        // END GAME + COIN LOGIC
+        // -----------------------------------------------------
+        private void EndGame()
+        {
+            int coinsWon = 0;
+
+            if (points == 5)
+                coinsWon = 1;
+            else if (points >= 6 && points <= 7)
+                coinsWon = 2;
+            else if (points >= 8 && points <= 9)
+                coinsWon = rand.Next(2, 4); // 2–3 coins
+            else if (points == 10)
+                coinsWon = rand.Next(3, 5); // 3–4 coins
+
+            if (coinsWon > 0)
+                AddCoinsToDatabase(coinsWon);
+
+            MessageBox.Show($"Game Over!\nScore: {points}/10\nYou earned {coinsWon} coin(s)!", "Game Finished");
+
+            StartGame();
+        }
+
+        // -----------------------------------------------------
+        // SAVE COINS TO DATABASE (FIXED)
+        // -----------------------------------------------------
+        private void AddCoinsToDatabase(int coins)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "UPDATE tbaccountdetails SET coins = coins + @coins WHERE username = @user";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@coins", coins);
+                        cmd.Parameters.AddWithValue("@user", currentUserId); // username
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database Error: " + ex.Message);
+            }
         }
 
         private void picMenu_Click(object sender, EventArgs e)
