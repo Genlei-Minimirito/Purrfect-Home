@@ -403,6 +403,16 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MAFIA_BANNER_ANIMATION {
+            get {
+                object obj = ResourceManager.GetObject("MAFIA_BANNER_ANIMATION", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NAELAW_NA_POSA {
             get {
                 object obj = ResourceManager.GetObject("NAELAW_NA_POSA", resourceCulture);

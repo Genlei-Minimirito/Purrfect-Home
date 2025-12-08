@@ -8,29 +8,30 @@ namespace Purrfect_Home
     {
         private AdoptForm adoptForm;
         private Timer animationTimer;
+        private GachaBanner selectedBanner;
 
-        public WinterAnimationForm(AdoptForm adopt)
+        // ✅ updated constructor
+        public WinterAnimationForm(AdoptForm adopt, GachaBanner banner)
         {
             InitializeComponent();
             adoptForm = adopt;
+            selectedBanner = banner;
 
-            // CREATE and CONFIGURE the 7.5 sec timer
             animationTimer = new Timer();
-            animationTimer.Interval = 7500; // 7.5 seconds
+            animationTimer.Interval = 7500;
             animationTimer.Tick += AnimationTimer_Tick;
-            animationTimer.Start(); // Start timer when form loads
+            animationTimer.Start();
         }
 
         private void AnimationTimer_Tick(object sender, EventArgs e)
         {
-            animationTimer.Stop();     // Stop timer so event only fires once
+            animationTimer.Stop();
             FinishAnimationAndShowResult();
         }
 
-        // This runs after 7.5 seconds OR btnFinish_Click (optional)
         private void FinishAnimationAndShowResult()
         {
-            var result = GachaManager.Roll();
+            var result = GachaManager.Roll(selectedBanner);
 
             GachaReceivedForm received = new GachaReceivedForm(adoptForm, result);
             received.StartPosition = FormStartPosition.Manual;
@@ -40,11 +41,14 @@ namespace Purrfect_Home
             this.Hide();
         }
 
-        // Optional: A button to skip the animation early
         private void btnFinish_Click(object sender, EventArgs e)
         {
             animationTimer.Stop();
             FinishAnimationAndShowResult();
+        }
+
+        private void picGachaAnimation_Click(object sender, EventArgs e)
+        {
         }
     }
 }

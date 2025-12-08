@@ -190,6 +190,9 @@
   <data name="LOG_IN_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOG IN UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MAFIA_BANNER_ANIMATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MAFIA BANNER ANIMATION.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NAELAW_NA_POSA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NAELAW NA POSA.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

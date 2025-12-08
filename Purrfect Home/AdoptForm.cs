@@ -10,178 +10,215 @@ namespace Purrfect_Home
     {
         private string connectionString = "server=localhost;database=dbposagame;uid=root;pwd=;";
         public string currentUserId;
-        public string CurrentUsername { get { return currentUserId; } }
+        private GachaBanner currentBanner = GachaBanner.Winter; // default
 
         public AdoptForm(string userID)
         {
             InitializeComponent();
             currentUserId = userID;
+
+            // hide mafia by default
+            picMafia.Visible = false;
+            picMafiaAdopt.Visible = false;
         }
 
-        /// <summary>
-        /// Save a gacha result into inventory. If duplicate (same username + catName) give coins instead.
-        /// </summary>
+        // -----------------------------------------
+        // BANNER SELECT
+        // -----------------------------------------
+        private void picWinterBannerSelect_Click(object sender, EventArgs e)
+        {
+            currentBanner = GachaBanner.Winter;
+
+            picMafia.Visible = false;
+            picMafiaAdopt.Visible = false;
+            this.BackgroundImage = Properties.Resources.WINTER_BANNER_ANIMATION;
+            picWinterBanner.Visible = true;
+            picWinterAdopt.Visible = true;
+            picWinterBannerSelect.Visible = false;
+            picMafiaBannerSelect.Visible = true;
+        }
+
+        private void picMafiaBannerSelect_Click(object sender, EventArgs e)
+        {
+            currentBanner = GachaBanner.Mafia;
+
+            picWinterBanner.Visible = false;
+            picWinterAdopt.Visible = false;
+            this.BackgroundImage = Properties.Resources.MAFIA_BANNER_ANIMATION;
+            picMafia.Visible = true;
+            picMafiaAdopt.Visible = true;
+            picWinterBannerSelect.Visible = true;
+            picMafiaBannerSelect.Visible = false;
+        }
+
+        // -----------------------------------------
+        // ADOPT BUTTON (WINTER + MAFIA)
+        // -----------------------------------------
+        private void picWinterAdopt_Click(object sender, EventArgs e)
+        {
+            TryAdopt();
+        }
+
+
+
+        private void TryAdopt()
+        {
+            if (UserHasFiveCats())
+            {
+                MessageBox.Show("You already have 5 cats.\nRelease one first!");
+                return;
+            }
+
+            if (!UserHasEnoughCatnip())
+            {
+                MessageBox.Show("You need at least 5 Catnip to adopt!");
+                return;
+            }
+
+            DeductCatnip(5);
+
+            // start animation
+            WinterAnimationForm anim = new WinterAnimationForm(this, currentBanner);
+            anim.StartPosition = FormStartPosition.Manual;
+            anim.Location = this.Location;
+            anim.Show();
+            this.Hide();
+        }
+
+        // -----------------------------------------
+        // SAVE GACHA RESULT
+        // -----------------------------------------
         public void SaveGachaResultToInventory(GachaResult result)
         {
             if (result == null) return;
 
-            // Validate GIF exists
             if (!File.Exists(result.FilePath))
             {
-                MessageBox.Show("GIF file missing: " + result.FilePath);
+                MessageBox.Show("GIF not found:\n" + result.FilePath);
                 return;
             }
 
-            bool isDuplicate = false;
+            // check duplicate
+            bool exists = false;
+
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string checkSql = "SELECT COUNT(*) FROM tbaccdetails WHERE username=@u AND catName=@name";
-                using (MySqlCommand cmd = new MySqlCommand(checkSql, conn))
+                string q = "SELECT COUNT(*) FROM tbaccdetails WHERE username=@u AND catName=@n";
+                using (MySqlCommand cmd = new MySqlCommand(q, conn))
                 {
                     cmd.Parameters.AddWithValue("@u", currentUserId);
-                    cmd.Parameters.AddWithValue("@name", result.Name);
-                    isDuplicate = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+                    cmd.Parameters.AddWithValue("@n", result.Name);
+                    exists = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
                 }
             }
 
-            if (isDuplicate)
+            if (exists)
             {
-                int reward = result.Stars * 1;
-                using (MySqlConnection conn = new MySqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string update = "UPDATE tbaccountdetails SET coins = coins + @c WHERE username=@u";
-                    using (MySqlCommand cmd = new MySqlCommand(update, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@c", reward);
-                        cmd.Parameters.AddWithValue("@u", currentUserId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                MessageBox.Show($"Duplicate cat! +{reward} coins added.");
+                int coins = result.Stars;
+                AddCatnip(coins);
+                MessageBox.Show($"Duplicate! +{coins} Catnip.");
                 return;
             }
 
-            // Insert new cat
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string insert = @"INSERT INTO tbaccdetails (username, gifPic, rarity, catName, nickname, equip)
-                                  VALUES (@u, @gif, @r, @name, '', 'no')";
+                string insert = @"INSERT INTO tbaccdetails
+                        (username, gifPic, rarity, catName, nickname, equip)
+                        VALUES (@u, @gif, @r, @n, '', 'no')";
+
                 using (MySqlCommand cmd = new MySqlCommand(insert, conn))
                 {
                     cmd.Parameters.AddWithValue("@u", currentUserId);
                     cmd.Parameters.AddWithValue("@gif", result.FilePath);
                     cmd.Parameters.AddWithValue("@r", result.Stars);
-                    cmd.Parameters.AddWithValue("@name", result.Name);
+                    cmd.Parameters.AddWithValue("@n", result.Name);
                     cmd.ExecuteNonQuery();
                 }
             }
-
-            MessageBox.Show("New cat added to inventory!");
         }
 
-        // -----------------------------
-        // NEW FUNCTION — GET USER COINS
-        // -----------------------------
-        public int GetUserCoins(string username)
+        // -----------------------------------------
+        // DB HELPERS
+        // -----------------------------------------
+        private bool UserHasFiveCats()
         {
-            int coins = 0;
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT coins FROM tbaccountdetails WHERE username=@u";
-                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                string q = "SELECT COUNT(*) FROM tbaccdetails WHERE username=@u";
+                using (MySqlCommand cmd = new MySqlCommand(q, conn))
                 {
-                    cmd.Parameters.AddWithValue("@u", username);
-                    object result = cmd.ExecuteScalar();
-
-                    if (result != null && result != DBNull.Value)
-                        coins = Convert.ToInt32(result);
+                    cmd.Parameters.AddWithValue("@u", currentUserId);
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    return count >= 5;
                 }
             }
-            return coins;
         }
 
-        private void picWinterAdopt_Click(object sender, EventArgs e)
+        private bool UserHasEnoughCatnip()
         {
-            // 1. Check cat limit (max 5)
-            if (UserHasFiveCats(currentUserId))
-            {
-                MessageBox.Show(
-                    "You already have 5 cats.\nPlease release a cat first before adopting a new one.",
-                    "Adoption Limit Reached",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                return;
-            }
-
-            // 2. Check if user has at least 5 coins
-            int coins = GetUserCoins(currentUserId);
-
-            if (coins < 5)
-            {
-                MessageBox.Show(
-                    "You need at least 5 Catnip/Coins to adopt a cat.",
-                    "Not Enough Coins",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-                return;
-            }
-
-            // 3. Deduct 5 coins
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string update = "UPDATE tbaccountdetails SET coins = coins - 5 WHERE username=@u";
-                using (MySqlCommand cmd = new MySqlCommand(update, conn))
+                string q = "SELECT coins FROM tbaccountdetails WHERE username=@u";
+                using (MySqlCommand cmd = new MySqlCommand(q, conn))
                 {
+                    cmd.Parameters.AddWithValue("@u", currentUserId);
+                    int coins = Convert.ToInt32(cmd.ExecuteScalar());
+                    return coins >= 5;
+                }
+            }
+        }
+
+        private void DeductCatnip(int amount)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                string q = "UPDATE tbaccountdetails SET coins = coins - @c WHERE username=@u";
+                using (MySqlCommand cmd = new MySqlCommand(q, conn))
+                {
+                    cmd.Parameters.AddWithValue("@c", amount);
                     cmd.Parameters.AddWithValue("@u", currentUserId);
                     cmd.ExecuteNonQuery();
                 }
             }
-
-            MessageBox.Show("5 coins deducted for adoption!", "Adoption Paid");
-
-            // 4. Continue adoption animation
-            WinterAnimationForm anim = new WinterAnimationForm(this);
-            anim.StartPosition = FormStartPosition.Manual;
-            anim.Location = this.Location;
-
-            anim.Show();
-            this.Hide();
         }
 
-        private void picHome_Click(object sender, EventArgs e)
+        private void AddCatnip(int amount)
         {
-            Form formHome = new landingPage(currentUserId);
-            formHome.StartPosition = FormStartPosition.Manual;
-            formHome.Location = this.Location;
-            formHome.ShowDialog();
-
-            this.Close();
-        }
-
-        public bool UserHasFiveCats(string username)
-        {
-            string connectionString = "server=localhost;database=dbposagame;uid=root;pwd=;";
-            int count = 0;
-
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                string query = "SELECT COUNT(*) FROM tbaccdetails WHERE username = @u";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@u", username);
-
-                count = Convert.ToInt32(cmd.ExecuteScalar());
+                string q = "UPDATE tbaccountdetails SET coins = coins + @c WHERE username=@u";
+                using (MySqlCommand cmd = new MySqlCommand(q, conn))
+                {
+                    cmd.Parameters.AddWithValue("@c", amount);
+                    cmd.Parameters.AddWithValue("@u", currentUserId);
+                    cmd.ExecuteNonQuery();
+                }
             }
-
-            return count >= 5;
         }
 
+        // -----------------------------------------
+        // BACK HOME
+        // -----------------------------------------
+        private void picHome_Click(object sender, EventArgs e)
+        {
+            var home = new landingPage(currentUserId);
+            home.StartPosition = FormStartPosition.Manual;
+            home.Location = this.Location;
+            home.Show();
+            this.Close();
+        }
+
+        private void picMafiaAdopt_Click(object sender, EventArgs e)
+        {
+            TryAdopt();
+        }
+
+      
     }
 }
