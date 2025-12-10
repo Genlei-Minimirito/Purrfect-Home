@@ -36,6 +36,8 @@ namespace Purrfect_Home
             picWinterAdopt.Visible = true;
             picWinterBannerSelect.Visible = false;
             picMafiaBannerSelect.Visible = true;
+            picMafiaInfo.Visible = false;
+            picWinterInfo.Visible = true;
         }
 
         private void picMafiaBannerSelect_Click(object sender, EventArgs e)
@@ -49,6 +51,8 @@ namespace Purrfect_Home
             picMafiaAdopt.Visible = true;
             picWinterBannerSelect.Visible = true;
             picMafiaBannerSelect.Visible = false;
+            picMafiaInfo.Visible = true;
+            picWinterInfo.Visible = false;
         }
 
         // -----------------------------------------
@@ -83,6 +87,7 @@ namespace Purrfect_Home
             anim.Location = this.Location;
             anim.Show();
             this.Hide();
+            this.Close();
         }
 
         // -----------------------------------------
@@ -207,7 +212,7 @@ namespace Purrfect_Home
         // -----------------------------------------
         private void picHome_Click(object sender, EventArgs e)
         {
-            var home = new landingPage(currentUserId);
+            Form home = new landingPage(currentUserId);
             home.StartPosition = FormStartPosition.Manual;
             home.Location = this.Location;
             home.Show();
@@ -219,6 +224,24 @@ namespace Purrfect_Home
             TryAdopt();
         }
 
-      
+        private void picWinterInfo_Click(object sender, EventArgs e)
+        {
+            Form winterinfo = new WinterBannerInfoForm(currentUserId);
+            winterinfo.StartPosition = FormStartPosition.Manual;
+            winterinfo.Location = this.Location;
+            winterinfo.Show();
+            this.Close();
+            this.Hide();
+        }
+
+        private void picMafiaInfo_Click(object sender, EventArgs e)
+        {
+            Form mafiainfo = new MafiaBannerInfo(currentUserId);
+            mafiainfo.StartPosition = FormStartPosition.Manual;
+            mafiainfo.Location = this.Location;
+            mafiainfo.Show();
+            this.Close();
+            this.Hide();
+        }
     }
 }

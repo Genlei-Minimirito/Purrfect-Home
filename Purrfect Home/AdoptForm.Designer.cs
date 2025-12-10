@@ -37,6 +37,7 @@
             picWinterInfo = new PictureBox();
             picMafia = new PictureBox();
             picMafiaAdopt = new PictureBox();
+            picMafiaInfo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picWinterBanner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picWinterAdopt).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMafiaBannerSelect).BeginInit();
@@ -45,6 +46,7 @@
             ((System.ComponentModel.ISupportInitialize)picWinterInfo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMafia).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picMafiaAdopt).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picMafiaInfo).BeginInit();
             SuspendLayout();
             // 
             // picWinterBanner
@@ -100,20 +102,26 @@
             // 
             // picHome
             // 
+            picHome.BackgroundImageLayout = ImageLayout.Stretch;
+            picHome.Image = Properties.Resources.HOME_ICON;
             picHome.Location = new Point(0, 1);
             picHome.Name = "picHome";
             picHome.Size = new Size(69, 58);
+            picHome.SizeMode = PictureBoxSizeMode.StretchImage;
             picHome.TabIndex = 4;
             picHome.TabStop = false;
             picHome.Click += picHome_Click;
             // 
             // picWinterInfo
             // 
-            picWinterInfo.Location = new Point(1292, 1);
+            picWinterInfo.Image = Properties.Resources.INFO_ICON_ASSET;
+            picWinterInfo.Location = new Point(1297, 1);
             picWinterInfo.Name = "picWinterInfo";
-            picWinterInfo.Size = new Size(69, 58);
+            picWinterInfo.Size = new Size(64, 58);
+            picWinterInfo.SizeMode = PictureBoxSizeMode.StretchImage;
             picWinterInfo.TabIndex = 5;
             picWinterInfo.TabStop = false;
+            picWinterInfo.Click += picWinterInfo_Click;
             // 
             // picMafia
             // 
@@ -141,6 +149,18 @@
             picMafiaAdopt.Visible = false;
             picMafiaAdopt.Click += picMafiaAdopt_Click;
             // 
+            // picMafiaInfo
+            // 
+            picMafiaInfo.Image = Properties.Resources.INFO_ICON_ASSET;
+            picMafiaInfo.Location = new Point(1292, 0);
+            picMafiaInfo.Name = "picMafiaInfo";
+            picMafiaInfo.Size = new Size(69, 58);
+            picMafiaInfo.SizeMode = PictureBoxSizeMode.StretchImage;
+            picMafiaInfo.TabIndex = 8;
+            picMafiaInfo.TabStop = false;
+            picMafiaInfo.Visible = false;
+            picMafiaInfo.Click += picMafiaInfo_Click;
+            // 
             // AdoptForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -148,6 +168,7 @@
             BackgroundImage = Properties.Resources.WINTER_BANNER_ANIMATION;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1359, 750);
+            Controls.Add(picMafiaInfo);
             Controls.Add(picMafiaAdopt);
             Controls.Add(picWinterInfo);
             Controls.Add(picHome);
@@ -167,6 +188,7 @@
             ((System.ComponentModel.ISupportInitialize)picWinterInfo).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMafia).EndInit();
             ((System.ComponentModel.ISupportInitialize)picMafiaAdopt).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picMafiaInfo).EndInit();
             ResumeLayout(false);
         }
 
@@ -180,5 +202,6 @@
         private PictureBox picWinterInfo;
         private PictureBox picMafia;
         private PictureBox picMafiaAdopt;
+        private PictureBox picMafiaInfo;
     }
 }

@@ -98,7 +98,7 @@
             invent4.SizeMode = PictureBoxSizeMode.StretchImage;
             invent4.TabIndex = 4;
             invent4.TabStop = false;
-            invent4.Click += invent4_Click;
+            
             // 
             // invent5
             // 

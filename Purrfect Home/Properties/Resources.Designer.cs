@@ -183,6 +183,16 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BACK_ASSET {
+            get {
+                object obj = ResourceManager.GetObject("BACK_ASSET", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BANANA_CAT {
             get {
                 object obj = ResourceManager.GetObject("BANANA_CAT", resourceCulture);
@@ -216,6 +226,16 @@ namespace Purrfect_Home.Properties {
         internal static System.Drawing.Bitmap CATCH_FOOD_UI {
             get {
                 object obj = ResourceManager.GetObject("CATCH_FOOD_UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CATCHFOOD_THUMBNAIL {
+            get {
+                object obj = ResourceManager.GetObject("CATCHFOOD_THUMBNAIL", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,6 +353,16 @@ namespace Purrfect_Home.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HOME_ICON {
+            get {
+                object obj = ResourceManager.GetObject("HOME_ICON", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HOME_UI {
             get {
                 object obj = ResourceManager.GetObject("HOME_UI", resourceCulture);
@@ -356,6 +386,16 @@ namespace Purrfect_Home.Properties {
         internal static System.Drawing.Bitmap INFIXTOPAWSTFIX_UI {
             get {
                 object obj = ResourceManager.GetObject("INFIXTOPAWSTFIX_UI", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap INFO_ICON_ASSET {
+            get {
+                object obj = ResourceManager.GetObject("INFO_ICON_ASSET", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,6 +446,16 @@ namespace Purrfect_Home.Properties {
         internal static System.Drawing.Bitmap MAFIA_BANNER_ANIMATION {
             get {
                 object obj = ResourceManager.GetObject("MAFIA_BANNER_ANIMATION", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MAFIA_BANNER_INFO {
+            get {
+                object obj = ResourceManager.GetObject("MAFIA_BANNER_INFO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -556,6 +606,16 @@ namespace Purrfect_Home.Properties {
         internal static System.Drawing.Bitmap WINTER_BANNER_ANIMATION {
             get {
                 object obj = ResourceManager.GetObject("WINTER_BANNER_ANIMATION", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WINTER_BANNER_INFO {
+            get {
+                object obj = ResourceManager.GetObject("WINTER_BANNER_INFO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

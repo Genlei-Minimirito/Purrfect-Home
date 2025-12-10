@@ -171,7 +171,7 @@
             // picCatchFood
             // 
             picCatchFood.BackColor = Color.Transparent;
-            picCatchFood.BackgroundImage = Properties.Resources.HOME_UI;
+            picCatchFood.BackgroundImage = Properties.Resources.CATCHFOOD_THUMBNAIL;
             picCatchFood.BackgroundImageLayout = ImageLayout.Stretch;
             picCatchFood.Location = new Point(657, 268);
             picCatchFood.Name = "picCatchFood";

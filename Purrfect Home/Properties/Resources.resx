@@ -124,6 +124,9 @@
   <data name="AVATAR_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AVATAR UI.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BACK_ASSET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BACK ASSET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BANANA_CAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BANANA CAT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,6 +135,9 @@
   </data>
   <data name="BATCAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BATCAT.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CATCHFOOD_THUMBNAIL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CATCHFOOD THUMBNAIL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CATCH_FOOD_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CATCH FOOD UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +175,9 @@
   <data name="GAME_SELECTION_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GAME SELECTION UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HOME_ICON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HOME ICON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HOME_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HOME UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -177,6 +186,9 @@
   </data>
   <data name="INFIXTOPAWSTFIX_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\INFIXTOPAWSTFIX UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="INFO_ICON_ASSET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\INFO ICON ASSET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="INVENTORY_UI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\INVENTORY UI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -192,6 +204,9 @@
   </data>
   <data name="MAFIA_BANNER_ANIMATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MAFIA BANNER ANIMATION.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MAFIA_BANNER_INFO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MAFIA BANNER INFO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NAELAW_NA_POSA" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NAELAW NA POSA.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -237,6 +252,9 @@
   </data>
   <data name="WINTER_BANNER_ANIMATION" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WINTER BANNER ANIMATION.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WINTER_BANNER_INFO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WINTER BANNER INFO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CARDS\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

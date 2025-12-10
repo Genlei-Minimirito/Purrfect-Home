@@ -208,7 +208,7 @@ namespace Lagen
             formAdopt.StartPosition = FormStartPosition.Manual;
             formAdopt.Location = this.Location;
             formAdopt.ShowDialog();
-
+            this.Hide();
             this.Close();
         }
 

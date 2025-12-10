@@ -17,7 +17,7 @@ namespace Purrfect_Home
         private int BasketSpeed = 60;
 
         private int maxFruits = 8;
-        private int baseFallSpeed = 2;
+        private int baseFallSpeed = 4;
         private int speedLevel = 0;
 
         private bool isPaused = false;

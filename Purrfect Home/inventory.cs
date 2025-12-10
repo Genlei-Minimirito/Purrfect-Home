@@ -151,9 +151,6 @@ namespace Lagen
             this.Close();
         }
 
-        private void invent4_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
