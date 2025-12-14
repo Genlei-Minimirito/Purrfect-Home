@@ -341,6 +341,18 @@ ASALocalRun/
 # MSBuild Binary and Structured Log
 *.binlog
 
+# .NET build folders
+bin/
+obj/
+
+# Executables & DLLs
+*.exe
+*.dll
+*.pdb
+
+# User files
+.vs/
+
 # NVidia Nsight GPU debugger configuration file
 *.nvuser
 
